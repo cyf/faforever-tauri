@@ -2,6 +2,12 @@
 
 ## Install
 
-1. `yarn`
+```shell
+yarn
+```
 
-2`yarn dev`
+## Development
+
+```shell
+yarn dev
+```
