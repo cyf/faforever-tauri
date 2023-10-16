@@ -15,7 +15,7 @@
       "active": true,
       "endpoints": ["https://github.com/cyf/faforever-next/releases/latest/download/latest.json"],
       "dialog": true,
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDJEQjgwODY5OTNCM0M0MEQKUldRTnhMT1RhUWk0TFV5WXltZnM1eGlTSkdqTTNoZDd2MlhBUk1QdTl4SXBmNGIrSllmRFZUVnMK",
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDJCRDQ1RjI3NUMyRjcwMjAKUldRZ2NDOWNKMS9VS3h1Skx3ejJjekpDV3phdTRIM25qTGhqaFVxUjBEK3RrS0Nic0V2RG54M2wK",
       "windows": {
         "installMode": "passive"
       }

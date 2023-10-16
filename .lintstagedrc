@@ -1,0 +1,3 @@
+{
+  "./app/**/*.{css,js,json,jsx,ts,tsx}": "yarn format"
+}
