@@ -1,9 +1,7 @@
-# faforever-next
+# FaForever
 
 ## Install
 
 1. `yarn`
 
-2. `cd app && yarn && cd ..`
-
-3. `yarn dev`
+2`yarn dev`

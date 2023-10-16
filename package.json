@@ -4,10 +4,11 @@
   "version": "0.0.0+11",
   "type": "module",
   "scripts": {
-    "dev": "tauri dev",
     "build": "tauri build",
-    "prepare": "husky install",
-    "format": "cd app && yarn format && cd .."
+    "dev": "tauri dev",
+    "format": "cd app && yarn format && cd ..",
+    "postinstall": "cd app && yarn && cd ..",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@tauri-apps/api": "^1.5.0"
