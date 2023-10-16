@@ -1,0 +1,58 @@
+{
+  "build": {
+    "beforeDevCommand": "cd app && yarn dev",
+    "beforeBuildCommand": "cd app && yarn build",
+    "devPath": "http://localhost:3000",
+    "distDir": "../app/output",
+    "withGlobalTauri": false
+  },
+  "package": {
+    "productName": "FaForever",
+    "version": "../package.json"
+  },
+  "tauri": {
+    "updater": {
+      "active": true,
+      "endpoints": ["https://github.com/cyf/faforever-next/releases/latest/download/latest.json"],
+      "dialog": true,
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDJEQjgwODY5OTNCM0M0MEQKUldRTnhMT1RhUWk0TFV5WXltZnM1eGlTSkdqTTNoZDd2MlhBUk1QdTl4SXBmNGIrSllmRFZUVnMK",
+      "windows": {
+        "installMode": "passive"
+      }
+    },
+    "allowlist": {
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true
+      }
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "com.chenyifaer.faforever",
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ]
+    },
+    "security": {
+      "csp": null
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "resizable": true,
+        "title": "FaForever",
+        "width": 800,
+        "height": 600
+      }
+    ],
+    "systemTray": {
+      "iconPath": "icons/tray.png"
+    }
+  }
+}
