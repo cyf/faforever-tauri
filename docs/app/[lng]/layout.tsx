@@ -1,6 +1,6 @@
 import "./globals.css";
+import React from "react";
 import cx from "classnames";
-import Footer from "@/components/layout/footer";
 import { dir } from "i18next";
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
@@ -11,8 +11,9 @@ import GoogleAnalytics from "@/components/shared/google-analytics";
 import ScrollToTop from "@/components/layout/scroll-to-top";
 import { languages } from "@/i18n/settings";
 import { sfPro, inter } from "./fonts";
-import { Providers } from "./providers";
-import Particles from "./particles";
+import Particles from "@/app/[lng]/particles";
+import Footer from "@/components/layout/footer";
+import { Providers } from "@/app/[lng]/providers";
 
 const Header = dynamic(() => import("@/components/layout/header"), {
   ssr: false,
@@ -24,9 +25,9 @@ export async function generateMetadata({
   params: { lng: string };
 }): Promise<Metadata | undefined> {
   return {
-    title: params.lng === "en" ? "ChenYifaer" : "陈一发儿",
+    title: params.lng === "en" ? "FaForever" : "FaForever",
     description: `${
-      params.lng === "en" ? "ChenYifaer" : "陈一发儿"
+      params.lng === "en" ? "FaForever" : "FaForever"
     } - 童话镇里一枝花, 人美歌甜陈一发.`,
     metadataBase: new URL("https://chenyifaer.com"),
     themeColor: "#FFF",
@@ -51,14 +52,20 @@ export default async function RootLayout({
 }) {
   return (
     <html lang={params.lng} dir={dir(params.lng)} suppressHydrationWarning>
-      <body className={cx(sfPro.variable, inter.variable)}>
+      <body
+        className={cx(
+          sfPro.variable,
+          inter.variable,
+          "flex min-h-screen flex-col",
+        )}
+      >
         <NextTopLoader height={1} />
         <Providers>
           <Particles />
           <Header lng={params.lng} />
           <main
             id="main"
-            className="flex min-h-screen w-full flex-col items-center justify-center py-32"
+            className={`flex w-full flex-1 flex-col items-center justify-center py-32`}
           >
             {children}
             <GoogleAnalytics />

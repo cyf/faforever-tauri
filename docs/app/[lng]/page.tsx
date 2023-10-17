@@ -18,7 +18,7 @@ import { BiTestTube } from "react-icons/bi";
 import { FaBlog } from "react-icons/fa";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import { Github } from "@/components/shared/icons";
+import { Microsoft, Apple, Linux } from "@/components/shared/icons";
 import { useTranslation } from "@/i18n/client";
 import { allPosts } from "contentlayer/generated";
 
@@ -81,39 +81,61 @@ export default function Home({
               animationDelay={1000}
               animationDuration={2500}
             >
-              童话镇里一枝花, 人美歌甜陈一发
+              一个可以听发姐音乐的桌面客户端
             </RoughNotation>
             .
           </Balancer>
         </p>
-        <div
-          className="mx-auto mt-6 flex animate-fade-up items-center justify-center space-x-5 opacity-0"
-          style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
+      </div>
+      <div
+        className="mx-auto mt-10 grid w-full max-w-2xl animate-fade-up grid-cols-1 gap-5 opacity-0 max-md:max-w-xs md:grid-cols-3"
+        style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
+      >
+        <a
+          className="col-span-1 flex items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 py-2 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800 dark:bg-black dark:text-white/80"
+          href="https://github.com/cyf"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <a
-            className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 py-2 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800 dark:bg-black dark:text-white/80"
-            href="https://github.com/cyf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Github />
-            <p>
-              <span className="sm:inline-block">Star on</span> GitHub{" "}
-            </p>
-          </a>
-        </div>
+          <Apple className="h-7 w-7" />
+          <p>
+            <span className="sm:inline-block">Apple</span>
+          </p>
+        </a>
+        <a
+          className="col-span-1 flex items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 py-2 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800 dark:bg-black dark:text-white/80"
+          href="https://github.com/cyf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Microsoft className="h-7 w-7" />
+          <p>
+            <span className="sm:inline-block">Microsoft</span>
+          </p>
+        </a>
+        <a
+          className="col-span-1 flex items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 py-2 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800 dark:bg-black dark:text-white/80"
+          href="https://github.com/cyf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Linux className="h-7 w-7" />
+          <p>
+            <span className="sm:inline-block">Linux</span>
+          </p>
+        </a>
       </div>
-      <div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 sm:grid-cols-2 lg:grid-cols-3 xl:px-0">
-        {features.map(({ title, description, demo, url }) => (
-          <DynamicCard
-            key={title}
-            title={title}
-            description={description}
-            demo={demo}
-            url={url}
-          />
-        ))}
-      </div>
+      {/*<div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 sm:grid-cols-2 lg:grid-cols-3 xl:px-0">*/}
+      {/*  {features.map(({ title, description, demo, url }) => (*/}
+      {/*    <DynamicCard*/}
+      {/*      key={title}*/}
+      {/*      title={title}*/}
+      {/*      description={description}*/}
+      {/*      demo={demo}*/}
+      {/*      url={url}*/}
+      {/*    />*/}
+      {/*  ))}*/}
+      {/*</div>*/}
     </>
   );
 }

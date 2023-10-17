@@ -1,28 +1,27 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { LngProps } from "@/i18next-lng";
 import { useTranslation } from "@/i18n/client";
 
-export default function Footer(props: LngProps) {
+function Footer(props: LngProps) {
   const { t } = useTranslation(props.lng, "footer");
   const { t: th } = useTranslation(props.lng, "header");
   const fullYear = new Date().getFullYear();
 
   return (
-    <div className="absolute w-full border-b border-gray-200 py-5 text-center dark:border-gray-700">
-      <p className="text-gray-500 dark:text-white/80">
-        {t("footer")}{" "}
-        <a
-          className="font-medium text-gray-800 underline transition-colors dark:text-white/90"
-          href="https://github.com/cyf/cyf.github.io"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub
-        </a>
-      </p>
+    <div className="w-full border-b border-gray-200 py-5 text-center dark:border-gray-700">
+      {/*<p className="text-gray-500 dark:text-white/80">*/}
+      {/*  {t("footer")}{" "}*/}
+      {/*  <a*/}
+      {/*    className="font-medium text-gray-800 underline transition-colors dark:text-white/90"*/}
+      {/*    href="https://github.com/cyf/faforever-next"*/}
+      {/*    target="_blank"*/}
+      {/*    rel="noopener noreferrer"*/}
+      {/*  >*/}
+      {/*    GitHub*/}
+      {/*  </a>*/}
+      {/*</p>*/}
       <p className="mt-2 flex items-center justify-center">
         <Link
           className="font-medium text-gray-800 underline transition-colors dark:text-white/90"
@@ -49,7 +48,7 @@ export default function Footer(props: LngProps) {
         {process.env.VERCEL_GIT_COMMIT_SHA && (
           <p className="flex items-center justify-center">
             <a
-              href={`https://github.com/cyf/cyf.github.io/commit/${process.env.VERCEL_GIT_COMMIT_SHA}`}
+              href={`https://github.com/cyf/faforever-next/commit/${process.env.VERCEL_GIT_COMMIT_SHA}`}
               target="_blank"
               className="hover:underline"
               rel="noreferrer"
@@ -60,7 +59,7 @@ export default function Footer(props: LngProps) {
         )}
         &nbsp;
         <Image
-          src="https://visitor-badge.laobi.icu/badge?page_id=chenyifaer.com"
+          src="https://visitor-badge.laobi.icu/badge?page_id=faforever.chenyifaer.com"
           width={60}
           height={20}
           alt="visitor badge"
@@ -69,3 +68,5 @@ export default function Footer(props: LngProps) {
     </div>
   );
 }
+
+export default Footer;
