@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
 import Balancer from "react-wrap-balancer";
 import { RoughNotation } from "react-rough-notation";
@@ -17,14 +18,38 @@ import {
 import { BiTestTube } from "react-icons/bi";
 import { FaBlog } from "react-icons/fa";
 import Image from "next/image";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
+import Pkg from "@/components/home/pkg";
 import { Microsoft, Apple, Linux } from "@/components/shared/icons";
 import { useTranslation } from "@/i18n/client";
+import { latestRelease } from "@/request";
 import { allPosts } from "contentlayer/generated";
+import { Asset, Release } from "@/types/release";
 
-const DynamicCard = dynamic(() => import("@/components/home/card"), {
-  ssr: false,
-});
+// const DynamicCard = dynamic(() => import("@/components/home/card"), {
+//   ssr: false,
+// });
+
+type SystemOS = "macos" | "windows" | "linux";
+
+const platforms: Record<SystemOS, string[]> = {
+  macos: [
+    "aarch64.dmg",
+    "universal.dmg",
+    "x64.dmg",
+    "aarch64.app.tar.gz",
+    "universal.app.tar.gz",
+    "x64.app.tar.gz",
+  ],
+  windows: [
+    "arm64-setup.exe",
+    "x64-setup.exe",
+    "x64-setup.nsis.zip",
+    "x86-setup.exe",
+    "x86-setup.nsis.zip",
+  ],
+  linux: ["amd64.AppImage", "amd64.AppImage.tar.gz", "amd64.deb"],
+};
 
 export default function Home({
   params,
@@ -33,6 +58,9 @@ export default function Home({
     lng: string;
   };
 }) {
+  const [loading, setLoading] = useState<boolean>(false);
+  const [data, setData] = useState<Release>({});
+  const [error, setError] = useState<any>(null);
   const { t } = useTranslation(params.lng, "header");
   const post = allPosts
     .filter((post) => post.slug.startsWith(`${params.lng}/blog`))
@@ -40,9 +68,60 @@ export default function Home({
       return new Date(a.publishedAt) > new Date(b.publishedAt) ? -1 : 1;
     })
     .at(0);
+
+  const assets = useMemo(() => {
+    if (data) {
+      return (
+        data.assets?.filter(
+          ({ name }) => !(name?.includes("-debug") || name?.endsWith(".sig")),
+        ) || []
+      );
+    }
+    return [];
+  }, [data]);
+
+  const { macos, windows, linux } = useMemo(() => {
+    const packages: Record<SystemOS, Asset[]> = {
+      macos: [],
+      windows: [],
+      linux: [],
+    };
+    Object.keys(platforms).forEach((key: string) => {
+      const matcher = (name: string) =>
+        platforms[key as SystemOS].some((platform: string) =>
+          name.endsWith(platform),
+        );
+      packages[key as SystemOS] =
+        assets.filter(({ name }) => name && matcher(name)) || [];
+    });
+    return packages;
+  }, [assets]);
+
+  const loadData = () => {
+    setLoading(true);
+    latestRelease()
+      .then((res) => {
+        setLoading(false);
+        if (res?.code === 0) {
+          setData(res?.data || {});
+        } else {
+          setError(res?.error);
+        }
+      })
+      .catch((error) => {
+        setLoading(false);
+        setError(error.message || error.toString());
+      });
+  };
+
+  useEffect(() => {
+    console.log("initial");
+    loadData();
+  }, []);
+
   return (
     <>
-      <div className="z-10 w-full max-w-xl px-5 xl:px-0">
+      <div className="w-full max-w-xl px-5 xl:px-0">
         {post && (
           <Link
             href={`/${post.slug}`}
@@ -88,43 +167,46 @@ export default function Home({
         </p>
       </div>
       <div
-        className="mx-auto mt-10 grid w-full max-w-2xl animate-fade-up grid-cols-1 gap-5 opacity-0 max-md:max-w-xs md:grid-cols-3"
+        className="mx-auto mt-10 grid w-full animate-fade-up grid-cols-1 gap-5 opacity-0 md:max-w-2xl md:grid-cols-3"
         style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
       >
-        <a
-          className="col-span-1 flex items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 py-2 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800 dark:bg-black dark:text-white/80"
-          href="https://github.com/cyf"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Pkg
+          lng={params.lng}
+          disabled={loading || error || !macos.length}
+          assets={macos}
         >
           <Apple className="h-7 w-7" />
           <p>
             <span className="sm:inline-block">Apple</span>
           </p>
-        </a>
-        <a
-          className="col-span-1 flex items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 py-2 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800 dark:bg-black dark:text-white/80"
-          href="https://github.com/cyf"
-          target="_blank"
-          rel="noopener noreferrer"
+        </Pkg>
+        <Pkg
+          lng={params.lng}
+          disabled={loading || error || !windows.length}
+          assets={windows}
         >
           <Microsoft className="h-7 w-7" />
           <p>
             <span className="sm:inline-block">Microsoft</span>
           </p>
-        </a>
-        <a
-          className="col-span-1 flex items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 py-2 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800 dark:bg-black dark:text-white/80"
-          href="https://github.com/cyf"
-          target="_blank"
-          rel="noopener noreferrer"
+        </Pkg>
+        <Pkg
+          lng={params.lng}
+          disabled={loading || error || !linux.length}
+          assets={linux}
         >
           <Linux className="h-7 w-7" />
           <p>
             <span className="sm:inline-block">Linux</span>
           </p>
-        </a>
+        </Pkg>
       </div>
+      <p
+        className="mt-4 animate-fade-up text-center text-sm text-red-400 opacity-0"
+        style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
+      >
+        <Balancer>{data?.tag_name}</Balancer>
+      </p>
       {/*<div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 sm:grid-cols-2 lg:grid-cols-3 xl:px-0">*/}
       {/*  {features.map(({ title, description, demo, url }) => (*/}
       {/*    <DynamicCard*/}
