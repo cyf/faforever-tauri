@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Popover from "@/components/shared/popover";
-import { useTranslation } from "@/i18n/client";
+// import { useTranslation } from "@/i18n/client";
 import { LngProps } from "@/i18next-lng";
 import { Asset } from "@/types/release";
 
@@ -13,7 +13,7 @@ export default function Pkg(
     children: React.ReactNode;
   },
 ) {
-  const { t } = useTranslation(props.lng, "header");
+  // const { t } = useTranslation(props.lng, "header");
   const [openPopover, setOpenPopover] = useState(false);
 
   return (
@@ -39,7 +39,7 @@ export default function Pkg(
     >
       <button
         onClick={() => setOpenPopover(!openPopover)}
-        className="col-span-1 flex items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 py-2 text-sm text-gray-600 shadow-md transition-colors hover:enabled:border-gray-800 disabled:cursor-not-allowed dark:bg-black dark:text-white/80 max-md:mx-10"
+        className="flex items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 py-2 text-sm text-gray-600 shadow-md transition-colors hover:enabled:border-gray-800 disabled:cursor-not-allowed dark:bg-black dark:text-white/80 max-md:mx-10"
         disabled={props.disabled}
         rel="noopener noreferrer"
       >
