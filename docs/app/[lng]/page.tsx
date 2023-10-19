@@ -58,10 +58,12 @@ export default function Home({
     lng: string;
   };
 }) {
+  const { t } = useTranslation(params.lng, "header");
+  const { t: tc } = useTranslation(params.lng, "common");
   const [loading, setLoading] = useState<boolean>(false);
   const [data, setData] = useState<Release>({});
   const [error, setError] = useState<any>(null);
-  const { t } = useTranslation(params.lng, "header");
+
   const post = allPosts
     .filter((post) => post.slug.startsWith(`${params.lng}/blog`))
     .sort((a, b) => {
@@ -166,47 +168,59 @@ export default function Home({
           </Balancer>
         </p>
       </div>
-      <div
-        className="mx-auto mt-10 grid w-full animate-fade-up grid-cols-1 gap-5 opacity-0 md:max-w-2xl md:grid-cols-3"
-        style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
-      >
-        <Pkg
-          lng={params.lng}
-          disabled={loading || error || !macos.length}
-          assets={macos}
-        >
-          <Apple className="h-7 w-7" />
-          <p>
-            <span className="sm:inline-block">Apple</span>
-          </p>
-        </Pkg>
-        <Pkg
-          lng={params.lng}
-          disabled={loading || error || !windows.length}
-          assets={windows}
-        >
-          <Microsoft className="h-7 w-7" />
-          <p>
-            <span className="sm:inline-block">Microsoft</span>
-          </p>
-        </Pkg>
-        <Pkg
-          lng={params.lng}
-          disabled={loading || error || !linux.length}
-          assets={linux}
-        >
-          <Linux className="h-7 w-7" />
-          <p>
-            <span className="sm:inline-block">Linux</span>
-          </p>
-        </Pkg>
+      <div className="mt-10 grid w-full max-w-screen-xl animate-fade-up xl:px-0">
+        <div className="flex items-center justify-center">
+          <div className="grid w-full grid-cols-1 gap-5 md:max-w-3xl md:grid-cols-3">
+            <Pkg
+              lng={params.lng}
+              disabled={loading || error || !macos.length}
+              assets={macos}
+            >
+              <Apple className="h-7 w-7" />
+              <p>
+                <span className="sm:inline-block">Apple</span>
+              </p>
+            </Pkg>
+            <Pkg
+              lng={params.lng}
+              disabled={loading || error || !windows.length}
+              assets={windows}
+            >
+              <Microsoft className="h-7 w-7" />
+              <p>
+                <span className="sm:inline-block">Microsoft</span>
+              </p>
+            </Pkg>
+            <Pkg
+              lng={params.lng}
+              disabled={loading || error || !linux.length}
+              assets={linux}
+            >
+              <Linux className="h-7 w-7" />
+              <p>
+                <span className="sm:inline-block">Linux</span>
+              </p>
+            </Pkg>
+          </div>
+        </div>
       </div>
-      <p
-        className="mt-4 animate-fade-up text-center text-sm text-red-400 opacity-0"
-        style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
-      >
-        <Balancer>{data?.tag_name}</Balancer>
-      </p>
+      {data?.tag_name && (
+        <p
+          className="mt-4 animate-fade-up text-center text-sm opacity-0"
+          style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
+        >
+          <Balancer>
+            {tc("latest")}:{" "}
+            <Link
+              className=" text-red-400"
+              href={`https://github.com/cyf/faforever-next/releases/tag/${data?.tag_name}`}
+              target="_blank"
+            >
+              {data?.tag_name}
+            </Link>
+          </Balancer>
+        </p>
+      )}
       {/*<div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 sm:grid-cols-2 lg:grid-cols-3 xl:px-0">*/}
       {/*  {features.map(({ title, description, demo, url }) => (*/}
       {/*    <DynamicCard*/}
