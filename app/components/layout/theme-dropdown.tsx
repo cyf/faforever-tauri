@@ -6,10 +6,9 @@ import type { IconType } from "react-icons";
 import Popover from "@/components/shared/popover";
 import { useAppTheme } from "@/lib/hooks";
 import { useTranslations } from "next-intl";
-import { LngProps } from "@/i18";
 import { themes, icons, Theme, ThemeMode } from "@/theme";
 
-export default function ThemeDropdown(props: LngProps) {
+export default function ThemeDropdown() {
   const t = useTranslations();
   const { theme, setTheme } = useAppTheme();
   const [openPopover, setOpenPopover] = useState(false);

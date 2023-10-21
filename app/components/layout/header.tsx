@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import useScroll from "@/lib/hooks/use-scroll";
 import LngDropdown from "./lng-dropdown";
 import ThemeDropdown from "./theme-dropdown";
@@ -12,7 +11,6 @@ import { useTranslations } from "next-intl";
 export default function Header(props: LngProps) {
   const t = useTranslations();
   const scrolled = useScroll(50);
-  const router = useRouter();
 
   // toggle menu
   const toggleMenu = () => {
@@ -51,7 +49,7 @@ export default function Header(props: LngProps) {
               <LngDropdown lng={props.lng} />
             </li>
             <li className="h-8 w-8 sm:h-9 sm:w-9">
-              <ThemeDropdown lng={props.lng} />
+              <ThemeDropdown />
             </li>
           </ul>
         </div>
