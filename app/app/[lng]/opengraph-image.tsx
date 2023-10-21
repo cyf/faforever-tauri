@@ -28,7 +28,7 @@ export default async function OG() {
         <img
           src="/logo.jpg"
           alt="Precedent Logo"
-          tw="w-20 h-20 mb-4 opacity-95"
+          className="mb-4 h-20 w-20 opacity-95"
         />
         <h1
           style={{
