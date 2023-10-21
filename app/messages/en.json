@@ -1,0 +1,24 @@
+{
+  "common": {
+    "join": "JOIN INSIDER",
+    "play": "PLAY"
+  },
+  "header": {
+    "title": "FaForever",
+    "menus": {
+      "system": "Auto Mode",
+      "dark": "Dark Mode",
+      "light": "Light Mode"
+    },
+    "languages": {
+      "zh": "Chinese",
+      "en": "English"
+    }
+  },
+  "footer": {
+    "footer": "Source code hosted on",
+    "privacy": "Privacy Policy",
+    "terms-of-use": "Terms and Conditions",
+    "copyright": "All Rights Reserved."
+  }
+}

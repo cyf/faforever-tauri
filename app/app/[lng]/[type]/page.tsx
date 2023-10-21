@@ -18,7 +18,7 @@ export async function generateMetadata({
     metadataBase: new URL("https://chenyifaer.com"),
     themeColor: "#FFF",
     icons: {
-      icon: "/faforever/logo.jpg",
+      icon: "/logo.jpg",
     },
   };
 }

@@ -1,0 +1,24 @@
+{
+  "common": {
+    "join": "参与内测",
+    "play": "开始玩"
+  },
+  "header": {
+    "title": "FaForever",
+    "menus": {
+      "system": "跟随系统",
+      "dark": "黑暗模式",
+      "light": "白天模式"
+    },
+    "languages": {
+      "zh": "中文",
+      "en": "英文"
+    }
+  },
+  "footer": {
+    "footer": "源码托管在",
+    "privacy": "隐私政策",
+    "terms-of-use": "条款和条件",
+    "copyright": "版权所有."
+  }
+}
