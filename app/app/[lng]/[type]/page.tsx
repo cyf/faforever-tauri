@@ -23,7 +23,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function Blog({
+export default function Blog({
   params,
 }: {
   params: { lng: string; type: string };
