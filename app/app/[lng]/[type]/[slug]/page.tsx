@@ -1,4 +1,3 @@
-"use client";
 // import type { Metadata } from "next";
 import { allPosts } from "contentlayer/generated";
 import { notFound } from "next/navigation";
@@ -14,11 +13,19 @@ import PostNav from "@/components/post/post-nav";
 //     { ssr: false }
 // )
 
-// export async function generateStaticParams() {
-//   return allPosts.map((post) => ({
-//     slug: post.slug,
-//   }));
-// }
+export async function generateStaticParams({
+  params: { lng, type },
+}: {
+  params: { lng: string; type: string };
+}) {
+  return allPosts
+    .filter((post) => post.slug.startsWith(`${lng}/${type}`))
+    .map((post) => {
+      return {
+        slug: post.slug.split("/")[2],
+      };
+    });
+}
 
 // export async function generateMetadata({
 //   params,
