@@ -32,5 +32,10 @@ jobs:
       - name: install dependencies
         run: yarn
 
+      - name: copy files to @contentlayer/source-files
+        if: matrix.platforms == 'windows-latest'
+        run: |
+          copy fixed_pkg\makeCacheItemFromFilePath.js app\node_modules\@contentlayer\source-files\dist\fetchData\makeCacheItemFromFilePath.js
+
       - name: build app
         run: yarn build:app
