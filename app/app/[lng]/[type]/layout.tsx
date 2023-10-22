@@ -1,5 +1,6 @@
 import React from "react";
 import { allPosts } from "contentlayer/generated";
+import { sep } from "path";
 
 export async function generateStaticParams({
   params: { lng },
@@ -7,10 +8,10 @@ export async function generateStaticParams({
   params: { lng: string };
 }) {
   return allPosts
-    .filter((post) => post.slug.startsWith(`${lng}/`))
+    .filter((post) => post.slug.startsWith(`${lng}${sep}`))
     .map((post) => {
       return {
-        type: post.slug.split("/")[1],
+        type: post.slug.split(sep)[1],
       };
     });
 }

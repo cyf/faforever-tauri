@@ -7,6 +7,7 @@ import Link from "next/link";
 import PostDate from "@/components/post/post-date";
 import { Mdx } from "@/components/mdx/mdx";
 import PostNav from "@/components/post/post-nav";
+import { sep } from "path";
 
 // const DiscussionEmbed = dynamic(
 //     () => import('disqus-react').then((mod) => mod.DiscussionEmbed),
@@ -19,10 +20,10 @@ export async function generateStaticParams({
   params: { lng: string; type: string };
 }) {
   return allPosts
-    .filter((post) => post.slug.startsWith(`${lng}/${type}`))
+    .filter((post) => post.slug.startsWith(`${lng}${sep}${type}`))
     .map((post) => {
       return {
-        slug: post.slug.split("/")[2],
+        slug: post.slug.split(sep)[2],
       };
     });
 }
@@ -51,7 +52,7 @@ export default function Legal({
 }: {
   params: { slug: string; type: string; lng: string };
 }) {
-  const slug = `${params.lng}/${params.type}/${params.slug}`;
+  const slug = `${params.lng}${sep}${params.type}${sep}${params.slug}`;
   const post = allPosts.find((post) => post.slug === slug);
 
   if (!post) notFound();
