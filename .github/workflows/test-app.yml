@@ -30,7 +30,7 @@ jobs:
           node-version: 18
 
       - name: install dependencies
-        run: yarn
+        run: yarn && yarn install:app
 
       - name: copy files to @contentlayer/source-files
         if: matrix.platforms == 'windows-latest'

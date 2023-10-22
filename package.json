@@ -13,7 +13,6 @@
     "format": "yarn format:app && yarn format:docs",
     "format:app": "cd app && yarn format && cd ..",
     "format:docs": "cd docs && yarn format && cd ..",
-    "postinstall": "npm-run-all install:*",
     "install:app": "cd app && yarn && cd ..",
     "install:docs": "cd docs && yarn && cd ..",
     "prepare": "husky install"
@@ -26,8 +25,7 @@
     "@commitlint/config-conventional": "^18.0.0",
     "@tauri-apps/cli": "^1.5.5",
     "husky": "^8.0.3",
-    "lint-staged": "^15.0.2",
-    "npm-run-all": "^4.1.5"
+    "lint-staged": "^15.0.2"
   },
   "engines": {
     "node": "^18"
