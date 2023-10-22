@@ -21,6 +21,7 @@ import Image from "next/image";
 // import dynamic from "next/dynamic";
 import { useTranslations } from "next-intl";
 import { allPosts } from "contentlayer/generated";
+import { sep } from "path";
 
 // const DynamicCard = dynamic(() => import("@/components/home/card"), {
 //   ssr: false,
@@ -36,7 +37,7 @@ export default function Home({
   const t = useTranslations();
 
   const post = allPosts
-    .filter((post) => post.slug.startsWith(`${params.lng}/blog`))
+    .filter((post) => post.slug.startsWith(`${params.lng}${sep}blog`))
     .sort((a, b) => {
       return new Date(a.publishedAt) > new Date(b.publishedAt) ? -1 : 1;
     })

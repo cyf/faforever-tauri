@@ -5,7 +5,11 @@
   "type": "module",
   "scripts": {
     "build": "tauri build",
+    "build:app": "cd app && yarn build && cd ..",
+    "build:docs": "cd docs && yarn build && cd ..",
     "dev": "tauri dev",
+    "dev:app": "cd app && yarn dev && cd ..",
+    "dev:docs": "cd docs && yarn dev && cd ..",
     "format": "yarn format:app && yarn format:docs",
     "format:app": "cd app && yarn format && cd ..",
     "format:docs": "cd docs && yarn format && cd ..",
