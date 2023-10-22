@@ -4,7 +4,6 @@ import PostItem from "@/components/post/post-item";
 import LatestPosts from "@/components/post/latest-posts";
 // import Topics from "@/components/post/topics";
 import { Metadata } from "next";
-import { sep } from "path";
 
 export async function generateMetadata({
   params,
@@ -33,7 +32,7 @@ export default function Blog({
 
   // Sort posts by date
   const posts = allPosts
-    .filter((post) => post.slug.startsWith(`${params.lng}${sep}${params.type}`))
+    .filter((post) => post.slug.startsWith(`${params.lng}/${params.type}`))
     .sort((a, b) => {
       return new Date(a.publishedAt) > new Date(b.publishedAt) ? -1 : 1;
     });
