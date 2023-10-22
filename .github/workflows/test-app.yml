@@ -1,0 +1,36 @@
+name: Build App
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  publish:
+    permissions:
+      contents: write
+    strategy:
+      fail-fast: false
+      matrix:
+        platforms:
+          - 'macos-latest'
+          - 'ubuntu-20.04'
+          - 'windows-latest'
+
+    runs-on: ${{ matrix.platforms }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: install dependencies
+        run: yarn
+
+      - name: build app
+        run: yarn build:app
