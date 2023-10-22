@@ -6,7 +6,6 @@ export async function generateStaticParams({
 }: {
   params: { lng: string };
 }) {
-  console.log("allPosts", allPosts[0]);
   return allPosts
     .filter((post) => post.slug.startsWith(`${lng}/`))
     .map((post) => {
