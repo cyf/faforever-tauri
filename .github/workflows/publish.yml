@@ -52,7 +52,14 @@ jobs:
           sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.0-dev libappindicator3-dev librsvg2-dev patchelf
 
       - name: install dependencies
-        run: yarn && yarn install:app
+        run: |
+          yarn config set network-timeout 300000
+          yarn && yarn install:app
+
+      - name: copy files to @contentlayer/source-files
+        if: matrix.settings.platform == 'windows-latest'
+        run: |
+          copy fixed_pkg\makeCacheItemFromFilePath.js app\node_modules\@contentlayer\source-files\dist\fetchData\makeCacheItemFromFilePath.js
 
       - uses: tauri-apps/tauri-action@v0
         env:
