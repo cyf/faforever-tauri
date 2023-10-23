@@ -1,3 +1,3 @@
 {
-  "./(app|docs)/**/*.{css,js,json,jsx,ts,tsx}": "yarn format"
+  "./(app|docs)/**/*.{css,js,json,jsx,ts,tsx}": "pnpm format"
 }

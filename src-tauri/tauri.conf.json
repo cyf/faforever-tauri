@@ -1,7 +1,7 @@
 {
   "build": {
-    "beforeDevCommand": "yarn dev:app",
-    "beforeBuildCommand": "yarn build:app",
+    "beforeDevCommand": "pnpm dev:app",
+    "beforeBuildCommand": "pnpm build:app",
     "devPath": "http://localhost:3000",
     "distDir": "../app/out",
     "withGlobalTauri": false

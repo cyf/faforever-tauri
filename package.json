@@ -5,16 +5,12 @@
   "type": "module",
   "scripts": {
     "build": "tauri build",
-    "build:app": "cd app && yarn build && cd ..",
-    "build:docs": "cd docs && yarn build && cd ..",
+    "build:app": "pnpm --filter app build",
+    "build:docs": "pnpm --filter docs build",
     "dev": "tauri dev",
-    "dev:app": "cd app && yarn dev && cd ..",
-    "dev:docs": "cd docs && yarn dev && cd ..",
-    "format": "yarn format:app && yarn format:docs",
-    "format:app": "cd app && yarn format && cd ..",
-    "format:docs": "cd docs && yarn format && cd ..",
-    "install:app": "cd app && yarn && cd ..",
-    "install:docs": "cd docs && yarn && cd ..",
+    "dev:app": "pnpm --filter app dev",
+    "dev:docs": "pnpm --filter docs dev",
+    "format": "pnpm --filter docs --filter app format",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -29,5 +25,6 @@
   },
   "engines": {
     "node": "^18"
-  }
+  },
+  "packageManager": "pnpm@8.9.2"
 }

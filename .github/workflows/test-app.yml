@@ -24,20 +24,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
       - name: setup node
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
       - name: install dependencies
-        run: |
-          yarn config set network-timeout 300000
-          yarn && yarn install:app
+        run: pnpm install
 
       - name: copy files to @contentlayer/source-files
         if: matrix.platforms == 'windows-latest'
         run: |
-          copy fixed_pkg\makeCacheItemFromFilePath.js app\node_modules\@contentlayer\source-files\dist\fetchData\makeCacheItemFromFilePath.js
+          copy fixed_pkg\makeCacheItemFromFilePath.js node_modules\.pnpm\node_modules\@contentlayer\source-files\dist\fetchData\makeCacheItemFromFilePath.js
 
       - name: build app
-        run: yarn build:app
+        run: pnpm build:app
