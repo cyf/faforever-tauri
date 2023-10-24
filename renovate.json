@@ -5,5 +5,11 @@
   ],
   "rangeStrategy": "bump",
   "prHourlyLimit": 0,
-  "ignoreDeps": ["node"]
+  "ignoreDeps": ["node"],
+  "packageRules": [
+    {
+      "allowedVersions": "18",
+      "matchPackageNames": ["@types/node"]
+    }
+  ]
 }
