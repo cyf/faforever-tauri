@@ -6,8 +6,8 @@ const octokit = new Octokit({
 export async function GET() {
   try {
     const latestRelease = await octokit.repos.getLatestRelease({
-      owner: "cyf",
-      repo: "faforever-next",
+      owner: process.env.NEXT_PUBLIC_GH_REPO_OWNER,
+      repo: process.env.NEXT_PUBLIC_GH_REPO,
     });
 
     return Response.json(
