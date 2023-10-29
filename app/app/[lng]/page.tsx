@@ -59,7 +59,7 @@ export default function Home({
           <Image
             className="rounded-full"
             alt="logo"
-            src="/logo.jpg"
+            src="/logo.png"
             width={160}
             height={160}
           />

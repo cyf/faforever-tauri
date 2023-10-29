@@ -33,7 +33,7 @@ export default function Header(props: LngProps) {
           className="flex items-center font-display text-2xl"
         >
           <Image
-            src="/faforever/logo.jpg"
+            src="/faforever/logo.png"
             alt="logo"
             width="30"
             height="30"

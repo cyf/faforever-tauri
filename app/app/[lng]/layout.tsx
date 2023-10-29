@@ -32,7 +32,7 @@ export async function generateMetadata({
     } - 童话镇里一枝花, 人美歌甜陈一发.`,
     metadataBase: new URL("https://chenyifaer.com"),
     icons: {
-      icon: "/logo.jpg",
+      icon: "/logo.png",
     },
   };
 }
