@@ -7,5 +7,9 @@ export async function latestRelease() {
     // https://nextjs.org/docs/app/building-your-application/caching
     cache: "no-store",
   });
+
+  if (!resp.ok) {
+    throw new Error("Failed to fetch data");
+  }
   return await resp.json();
 }
