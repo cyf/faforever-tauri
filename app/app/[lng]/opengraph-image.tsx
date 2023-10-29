@@ -26,7 +26,7 @@ export default async function OG() {
         }}
       >
         <img
-          src="/logo.jpg"
+          src="/logo.png"
           alt="Precedent Logo"
           className="mb-4 h-20 w-20 opacity-95"
         />

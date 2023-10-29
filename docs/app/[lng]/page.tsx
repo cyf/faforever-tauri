@@ -138,7 +138,7 @@ export default function Home({
           <Image
             className="rounded-full"
             alt="logo"
-            src="/faforever/logo.jpg"
+            src="/faforever/logo.png"
             width={160}
             height={160}
           />
