@@ -5,5 +5,6 @@ declare namespace NodeJS {
     NEXT_PUBLIC_GH_TOKEN: string;
     NEXT_PUBLIC_GH_REPO_OWNER: string;
     NEXT_PUBLIC_GH_REPO: string;
+    NEXT_PUBLIC_COOKIE_BANNER_ID: string;
   }
 }
