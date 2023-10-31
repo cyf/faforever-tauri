@@ -2,6 +2,7 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 mod tray;
+mod menu;
 
 // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
 #[tauri::command]
@@ -11,6 +12,8 @@ fn greet(name: &str) -> String {
 
 fn main() {
     tauri::Builder::default()
+        .menu(menu::init("FaForever"))
+        .on_menu_event(menu::handle_menu_event)
         .system_tray(tray::main_menu())
         .invoke_handler(tauri::generate_handler![greet])
         .on_system_tray_event(tray::handler)
