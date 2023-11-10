@@ -25,6 +25,7 @@ import { useTranslation } from "@/i18n/client";
 import { latestRelease } from "@/request";
 import { allPosts } from "contentlayer/generated";
 import { Asset, Release } from "@/types/release";
+import { basePath } from "@/constants";
 
 // const DynamicCard = dynamic(() => import("@/components/home/card"), {
 //   ssr: false,
@@ -138,7 +139,7 @@ export default function Home({
           <Image
             className="rounded-full"
             alt="logo"
-            src="/faforever/logo.png"
+            src={`${basePath}/logo.png`}
             width={160}
             height={160}
           />
