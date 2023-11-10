@@ -1,10 +1,11 @@
 import { MetadataRoute } from "next";
 import { allPosts } from "contentlayer/generated";
+import { basePath } from "@/constants";
 
 const domain =
   process.env.NODE_ENV === "production"
-    ? "https://chenyifaer.com/faforever"
-    : "http://localhost:3000/faforever";
+    ? `https://chenyifaer.com${basePath}`
+    : `http://localhost:3000${basePath}`;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const sitemaps = allPosts
