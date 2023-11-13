@@ -32,6 +32,8 @@ yarn dev
 
 ## Production
 
+The production server runs at [https://app.faforever.chenyifaer.com](https://app.faforever.chenyifaer.com)
+
 Build the application for production:
 
 ```bash
