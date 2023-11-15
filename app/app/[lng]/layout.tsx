@@ -69,7 +69,12 @@ export default async function RootLayout({
           "flex min-h-screen flex-col",
         )}
       >
-        <NextIntlClientProvider locale={params.lng} messages={messages}>
+        <NextIntlClientProvider
+          locale={params.lng}
+          now={new Date()}
+          timeZone={Intl.DateTimeFormat().resolvedOptions().timeZone}
+          messages={messages}
+        >
           <NextTopLoader height={1} />
           <Providers>
             <Particles />
