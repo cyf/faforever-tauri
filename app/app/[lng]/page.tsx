@@ -83,9 +83,8 @@ export default function Home({
               animationDelay={1000}
               animationDuration={2500}
             >
-              一个休闲小游戏
+              {t("home.title")}
             </RoughNotation>
-            .
           </Balancer>
         </p>
       </div>
