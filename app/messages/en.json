@@ -15,6 +15,9 @@
       "en": "English"
     }
   },
+  "home": {
+    "title": "A casual game."
+  },
   "footer": {
     "footer": "Source code hosted on",
     "privacy": "Privacy Policy",
