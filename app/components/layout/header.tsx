@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { Github } from "@/components/shared/icons";
 import useScroll from "@/lib/hooks/use-scroll";
 import LngDropdown from "./lng-dropdown";
 import ThemeDropdown from "./theme-dropdown";
@@ -45,6 +46,17 @@ export default function Header(props: LngProps) {
           id="navbar-language"
         >
           <ul className="flex flex-col items-center rounded-lg border border-gray-100 p-4 font-medium dark:border-gray-700 max-md:space-y-3 md:mt-0 md:flex-row md:space-x-3 md:border-0 md:p-0">
+            <li className="h-8 w-8 sm:h-9 sm:w-9">
+              <div className="relative inline-block text-left">
+                <Link
+                  href="https://github.com/cyf/faforever-next"
+                  target="_blank"
+                  className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-full transition-all duration-75 focus:outline-none active:scale-95 sm:h-9 sm:w-9"
+                >
+                  <Github className="h-5 w-5" />
+                </Link>
+              </div>
+            </li>
             <li className="h-8 w-8 sm:h-9 sm:w-9">
               <LngDropdown lng={props.lng} />
             </li>
