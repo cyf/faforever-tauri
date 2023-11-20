@@ -16,12 +16,16 @@ export async function GET() {
     });
 
     return Response.json(
-      { code: 0, data: latestRelease.data },
+      { code: 0, data: latestRelease.data, timestamp: Date.now() },
       { status: 200 },
     );
   } catch (error: any) {
     return Response.json(
-      { code: -1, error: error.message || error.toString() },
+      {
+        code: -1,
+        error: error.message || error.toString(),
+        timestamp: Date.now(),
+      },
       { status: 500 },
     );
   }
