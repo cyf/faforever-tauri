@@ -67,8 +67,8 @@ importers:
         specifier: ^0.3.4
         version: 0.3.4(contentlayer@0.3.4)(esbuild@0.19.5)(next@14.0.3)(react-dom@18.2.0)(react@18.2.0)
       next-intl:
-        specifier: ^3.1.4
-        version: 3.1.4(next@14.0.3)(react@18.2.0)
+        specifier: ^3.2.0
+        version: 3.2.0(next@14.0.3)(react@18.2.0)
       next-themes:
         specifier: ^0.2.1
         version: 0.2.1(next@14.0.3)(react-dom@18.2.0)(react@18.2.0)
@@ -10760,8 +10760,8 @@ packages:
       - supports-color
     dev: false
 
-  /next-intl@3.1.4(next@14.0.3)(react@18.2.0):
-    resolution: {integrity: sha512-/mewUryIPdoZT7j+8ipN2rfWuuNGdl+xiwxWxYkYko0kGY/a2IlcgqaMBKwue5V5M17Vk9bwiydv/2wySJXG8w==}
+  /next-intl@3.2.0(next@14.0.3)(react@18.2.0):
+    resolution: {integrity: sha512-vKGokJvQOdvZG9qGNCIh2bLeoLwPzNXuER5kj1ZWK2Rg1w3vHmBMALS7WOfy7cNkk5rFOa68CYqBE2cjBGapWg==}
     peerDependencies:
       next: ^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0 || ^14.0.0
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -10770,7 +10770,7 @@ packages:
       negotiator: 0.6.3
       next: 14.0.3(@babel/core@7.23.2)(@opentelemetry/api@1.6.0)(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
-      use-intl: 3.1.4(react@18.2.0)
+      use-intl: 3.2.0(react@18.2.0)
     dev: false
 
   /next-themes@0.2.1(next@14.0.3)(react-dom@18.2.0)(react@18.2.0):
@@ -14612,8 +14612,8 @@ packages:
       react: 18.2.0
     dev: false
 
-  /use-intl@3.1.4(react@18.2.0):
-    resolution: {integrity: sha512-iBIHPetLeEdAuIhAXRI9ukfjjvadP2EWoAEl6IvbWojrwYgcP52A6Al1nyzIwZD7iWBU1T3Ri3Hg4HsV7cWlVA==}
+  /use-intl@3.2.0(react@18.2.0):
+    resolution: {integrity: sha512-7Ut3kQTL1WYEgpzJa9jRBaHnnJ0CPRxzNF/U8fNhi05aCBSuhJ3lwQGv9XBpOhDlprnAQUWsCXkvFKV4kLiHEA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
