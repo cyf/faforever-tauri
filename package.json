@@ -14,7 +14,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@tauri-apps/api": "^1.5.1"
+    "@tauri-apps/api": "^1.5.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",
