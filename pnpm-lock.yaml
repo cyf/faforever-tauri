@@ -52,8 +52,8 @@ importers:
         specifier: ^10.2.3
         version: 10.2.3(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0)
       framer-motion:
-        specifier: ^10.17.1
-        version: 10.17.1(react-dom@18.2.0)(react@18.2.0)
+        specifier: ^10.17.2
+        version: 10.17.2(react-dom@18.2.0)(react@18.2.0)
       leva:
         specifier: 0.9.35
         version: 0.9.35(@types/react-dom@18.2.18)(@types/react@18.2.46)(react-dom@18.2.0)(react@18.2.0)
@@ -182,8 +182,8 @@ importers:
         specifier: ^10.2.3
         version: 10.2.3(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0)
       framer-motion:
-        specifier: ^10.17.1
-        version: 10.17.1(react-dom@18.2.0)(react@18.2.0)
+        specifier: ^10.17.2
+        version: 10.17.2(react-dom@18.2.0)(react@18.2.0)
       i18next:
         specifier: ^23.7.15
         version: 23.7.15
@@ -7725,8 +7725,8 @@ packages:
   /fraction.js@4.3.7:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
 
-  /framer-motion@10.17.1(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-0lflaBT+giEiIHJoRdAP038xuZIiMcV2+mzXD+3ffw3xHzmi7ODHqJJcvIxNOBr+pDiiOlaEeIOLJ3VEaL/33w==}
+  /framer-motion@10.17.2(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-ZfWwAFWgc3xCnJIyzV0y+DI3W/Hfxn/2ySLF6qu9Pa3chNcHzqaWt+G8iExhXuLK0A1gunooiOC0qddlX5BY1A==}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0
