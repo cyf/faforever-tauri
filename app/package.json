@@ -17,7 +17,7 @@
     "contentlayer": "^0.3.4",
     "date-fns": "^3.1.0",
     "focus-trap-react": "^10.2.3",
-    "framer-motion": "^10.17.6",
+    "framer-motion": "^10.17.8",
     "leva": "0.9.35",
     "ms": "^2.1.3",
     "next": "14.0.4",
