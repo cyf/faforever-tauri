@@ -11,7 +11,7 @@
     "dev:app": "pnpm --filter app dev",
     "dev:docs": "pnpm --filter docs dev",
     "format": "pnpm --filter docs --filter app format",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "@tauri-apps/api": "^1.5.3"
