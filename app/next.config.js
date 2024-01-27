@@ -7,13 +7,12 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    unoptimized: true,
     dangerouslyAllowSVG: true,
-    domains: [
-      "lh3.googleusercontent.com",
-      "visitor-badge.laobi.icu",
-      "vercel.com",
+    remotePatterns: [
+      { hostname: "lh3.googleusercontent.com" },
+      { hostname: "visitor-badge.laobi.icu" },
     ],
+    unoptimized: true,
   },
   experimental: {
     webpackBuildWorker: true,
