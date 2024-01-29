@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Github } from "@/components/shared/icons";
-import useScroll from "@/lib/hooks/use-scroll";
+import { useScroll } from "@/lib/hooks";
 import LngDropdown from "./lng-dropdown";
 import ThemeDropdown from "./theme-dropdown";
 import { LngProps } from "@/i18next-lng";

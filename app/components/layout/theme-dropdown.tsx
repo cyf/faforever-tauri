@@ -1,11 +1,10 @@
 "use client";
-
 import { useState, useMemo } from "react";
 import { MdOutlineDesktopMac } from "react-icons/md";
 import type { IconType } from "react-icons";
+import { useTranslations } from "next-intl";
 import Popover from "@/components/shared/popover";
 import { useAppTheme } from "@/lib/hooks";
-import { useTranslations } from "next-intl";
 import { themes, icons, Theme, ThemeMode } from "@/theme";
 
 export default function ThemeDropdown() {

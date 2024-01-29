@@ -1,16 +1,19 @@
 "use client";
-
+import React, { useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { listen, type UnlistenFn } from "@tauri-apps/api/event";
+import { useTranslations } from "next-intl";
 import { Github } from "@/components/shared/icons";
-import useScroll from "@/lib/hooks/use-scroll";
+import { useAppTheme, useScroll } from "@/lib/hooks";
+import { isInApp } from "@/constants";
 import LngDropdown from "./lng-dropdown";
 import ThemeDropdown from "./theme-dropdown";
 import { LngProps } from "@/i18";
-import { useTranslations } from "next-intl";
 
 export default function Header(props: LngProps) {
   const t = useTranslations();
+  const { setTheme } = useAppTheme();
   const scrolled = useScroll(50);
 
   // toggle menu
@@ -18,6 +21,36 @@ export default function Header(props: LngProps) {
     const $navbar = document.querySelector("#navbar-language");
     $navbar?.classList.toggle("hidden");
   };
+
+  useEffect(() => {
+    let unlisten: UnlistenFn;
+    if (isInApp) {
+      listen<string>("theme_changed", (event) => {
+        console.log(
+          `Got response in window ${event.windowLabel}, payload: ${event.payload}`,
+        );
+        setTheme(event.payload);
+      }).then((value) => (unlisten = value));
+    }
+    return () => {
+      unlisten && unlisten();
+    };
+  }, []);
+
+  const ShowContent = useCallback(
+    ({
+      isShow,
+      children,
+    }: {
+      isShow: boolean;
+      children: React.ReactElement;
+    }) => {
+      return isShow ? children : null;
+    },
+    [],
+  );
+
+  console.log("isInApp", isInApp);
 
   return (
     <div
@@ -60,9 +93,11 @@ export default function Header(props: LngProps) {
             <li className="h-8 w-8 sm:h-9 sm:w-9">
               <LngDropdown lng={props.lng} />
             </li>
-            <li className="h-8 w-8 sm:h-9 sm:w-9">
-              <ThemeDropdown />
-            </li>
+            <ShowContent isShow={!isInApp}>
+              <li className="h-8 w-8 sm:h-9 sm:w-9">
+                <ThemeDropdown />
+              </li>
+            </ShowContent>
           </ul>
         </div>
         <button

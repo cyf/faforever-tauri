@@ -1,7 +1,8 @@
 {
   "common": {
     "join": "JOIN INSIDER",
-    "play": "PLAY"
+    "play": "PLAY",
+    "create": "Create Window"
   },
   "header": {
     "title": "FaForever",

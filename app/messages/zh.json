@@ -1,7 +1,8 @@
 {
   "common": {
     "join": "参与内测",
-    "play": "开始玩"
+    "play": "开始玩",
+    "create": "创建窗口"
   },
   "header": {
     "title": "FaForever",
