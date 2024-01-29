@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+// import { invoke } from "@tauri-apps/api/tauri";
 import { useTheme } from "next-themes";
 import { defaultTheme } from "@/theme";
 
@@ -18,6 +19,11 @@ export default function useAppTheme(): UseAppThemeProps {
     () => (theme === "system" ? systemTheme : theme) || defaultTheme,
     [theme, systemTheme],
   );
+
+  // const changeTheme = async (theme: string) => {
+  //   setTheme(theme);
+  //   await invoke("theme_changed", { name: theme === "system" ? systemTheme : theme });
+  // }
 
   return {
     theme: theme || defaultTheme,
