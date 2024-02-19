@@ -2648,6 +2648,7 @@ version = "1.0.104"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "076066c5f1078eac5b722a31827a8832fe108bed65dfa75e233c89f8206e976c"
 dependencies = [
+ "indexmap 2.0.0",
  "itoa 1.0.9",
  "ryu",
  "serde",
@@ -3004,15 +3005,16 @@ checksum = "9d0e916b1148c8e263850e1ebcbd046f333e0683c724876bb0da63ea4373dc8a"
 
 [[package]]
 name = "tauri"
-version = "1.5.4"
+version = "1.6.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fd27c04b9543776a972c86ccf70660b517ecabbeced9fb58d8b961a13ad129af"
+checksum = "0da520ff07c0745199204f7a7a62a8c6ee1666313b792b051ca170eca04649aa"
 dependencies = [
  "anyhow",
  "base64 0.21.2",
  "bytes",
  "cocoa",
  "dirs-next",
+ "dunce",
  "embed_plist",
  "encoding_rs",
  "flate2",
@@ -3023,6 +3025,7 @@ dependencies = [
  "heck 0.4.1",
  "http",
  "ignore",
+ "indexmap 1.9.3",
  "minisign-verify",
  "objc",
  "once_cell",
@@ -3139,9 +3142,9 @@ dependencies = [
 
 [[package]]
 name = "tauri-runtime-wry"
-version = "0.14.3"
+version = "0.14.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6cae61fbc731f690a4899681c9052dde6d05b159b44563ace8186fc1bfb7d158"
+checksum = "a561ae38c6b27510c77a3ab4cf65bebe18fba51ca4569e023fb9e194ff4995fb"
 dependencies = [
  "cocoa",
  "gtk",
