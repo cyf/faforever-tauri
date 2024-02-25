@@ -24,33 +24,13 @@ import { Microsoft, Apple, Linux } from "@/components/shared/icons";
 import { useTranslation } from "@/i18n/client";
 import { latestRelease } from "@/request";
 import { allPosts } from "contentlayer/generated";
+import { SystemOS } from "@/types/common";
 import { Asset, Release } from "@/types/release";
-import { basePath } from "@/constants";
+import { basePath, platforms } from "@/constants";
 
 // const DynamicCard = dynamic(() => import("@/components/home/card"), {
 //   ssr: false,
 // });
-
-type SystemOS = "macos" | "windows" | "linux";
-
-const platforms: Record<SystemOS, string[]> = {
-  macos: [
-    "aarch64.dmg",
-    "universal.dmg",
-    "x64.dmg",
-    "aarch64.app.tar.gz",
-    "universal.app.tar.gz",
-    "x64.app.tar.gz",
-  ],
-  windows: [
-    "arm64-setup.exe",
-    "x64-setup.exe",
-    "x64-setup.nsis.zip",
-    "x86-setup.exe",
-    "x86-setup.nsis.zip",
-  ],
-  linux: ["amd64.AppImage", "amd64.AppImage.tar.gz", "amd64.deb"],
-};
 
 export default function Home({
   params,
@@ -211,13 +191,23 @@ export default function Home({
           style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
         >
           <Balancer>
-            {tc("latest")}:{" "}
+            {data?.tag_name && (
+              <>
+                {tc("latest")}:{" "}
+                <Link
+                  className=" text-red-400"
+                  href={`https://github.com/cyf/faforever-next/releases/tag/${data?.tag_name}`}
+                  target="_blank"
+                >
+                  {data?.tag_name}
+                </Link>
+              </>
+            )}
             <Link
-              className=" text-red-400"
-              href={`https://github.com/cyf/faforever-next/releases/tag/${data?.tag_name}`}
-              target="_blank"
+              href={`/${params.lng}/releases`}
+              className="ml-2 text-sm text-gray-500 hover:underline dark:text-gray-400"
             >
-              {data?.tag_name}
+              More releases
             </Link>
           </Balancer>
         </p>
