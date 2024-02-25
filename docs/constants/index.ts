@@ -4,6 +4,10 @@ export const cacheLngKey: string = "__faforever_website_lng__";
 export const cacheThemeKey: string = "__faforever_website_theme__";
 export const basePath =
   process.env.NEXT_PUBLIC_VERCEL_ENV === "production" ? "/faforever" : "";
+export const domain =
+  process.env.NODE_ENV === "production"
+    ? `https://chenyifaer.com${basePath}`
+    : `http://localhost:3000${basePath}`;
 export const platforms: Record<SystemOS, string[]> = {
   macos: [
     "aarch64.dmg",
@@ -22,4 +26,4 @@ export const platforms: Record<SystemOS, string[]> = {
   ],
   linux: ["amd64.AppImage", "amd64.AppImage.tar.gz", "amd64.deb"],
 };
-export const pageSize: number = 15;
+export const pageSize: number = 10;
