@@ -1,8 +1,5 @@
-import { Octokit } from "@octokit/rest";
-
-const octokit = new Octokit({
-  auth: process.env.NEXT_PUBLIC_GH_TOKEN,
-});
+import httpStatus from "http-status";
+import github from "@/lib/github";
 
 // https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config
 export const dynamic = "force-dynamic";
@@ -10,14 +7,14 @@ export const dynamic = "force-dynamic";
 
 export async function GET() {
   try {
-    const latestRelease = await octokit.repos.getLatestRelease({
+    const latestRelease = await github.repos.getLatestRelease({
       owner: process.env.NEXT_PUBLIC_GH_REPO_OWNER,
       repo: process.env.NEXT_PUBLIC_GH_REPO,
     });
 
     return Response.json(
       { code: 0, data: latestRelease.data, timestamp: Date.now() },
-      { status: 200 },
+      { status: httpStatus.OK },
     );
   } catch (error: any) {
     return Response.json(
@@ -26,7 +23,7 @@ export async function GET() {
         error: error.message || error.toString(),
         timestamp: Date.now(),
       },
-      { status: 500 },
+      { status: httpStatus.INTERNAL_SERVER_ERROR },
     );
   }
 }
