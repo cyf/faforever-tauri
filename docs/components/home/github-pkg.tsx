@@ -19,7 +19,7 @@ export default function GitHubPkg(
   return (
     <Popover
       content={
-        <div className="w-full min-w-[14rem] overflow-scroll rounded-md bg-white p-2 dark:bg-black max-md:max-h-[90vh] md:max-h-[50vh]">
+        <div className="w-full min-w-[14rem] overflow-scroll rounded-md bg-white p-2 dark:bg-black max-md:max-h-[50vh] md:max-h-[50vh]">
           {assets.map((asset) => {
             return (
               <Link
