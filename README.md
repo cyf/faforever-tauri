@@ -1,7 +1,5 @@
 # FaForever
 
-[![CodeFactor](https://www.codefactor.io/repository/github/cyf/faforever-next/badge)](https://www.codefactor.io/repository/github/cyf/faforever-next)
-
 ## Setup
 
 Make sure to install the dependencies:
