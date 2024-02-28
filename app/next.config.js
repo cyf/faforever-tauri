@@ -21,6 +21,7 @@ const nextConfig = {
     GIT_COMMIT_SHA:
       process.env.GIT_COMMIT_SHA || process.env.VERCEL_GIT_COMMIT_SHA,
     NEXT_PUBLIC_GOOGLE_ID: process.env.NEXT_PUBLIC_GOOGLE_ID,
+    NEXT_PUBLIC_SHOW_PARTICLES: process.env.NEXT_PUBLIC_SHOW_PARTICLES,
     TAURI_PLATFORM: process.env.TAURI_PLATFORM,
   },
 };
