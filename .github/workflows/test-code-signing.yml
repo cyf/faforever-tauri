@@ -1,0 +1,81 @@
+name: Code Signing for macOS
+
+on:
+  # Enable manual run
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Tag to create (e.g. v1.0.0)."
+        required: true
+        default: "v1.0.0"
+        type: string
+
+jobs:
+  publish:
+    permissions:
+      contents: write
+    strategy:
+      fail-fast: false
+      matrix:
+        settings:
+          - platform: 'macos-latest'
+            args: '--target universal-apple-darwin'
+          - platform: 'macos-latest'
+            args: '--target x86_64-apple-darwin'
+          - platform: 'macos-latest'
+            args: '--target aarch64-apple-darwin'
+
+    runs-on: ${{ matrix.settings.platform }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: install Rust stable
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: "aarch64-apple-darwin,aarch64-pc-windows-msvc"
+
+      - name: list targets
+        run: rustup target list
+
+      - name: install dependencies (ubuntu only)
+        if: matrix.settings.platform == 'ubuntu-20.04'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.0-dev libappindicator3-dev librsvg2-dev patchelf
+
+      - name: install dependencies
+        run: pnpm install
+
+      - name: copy files to @contentlayer/source-files
+        if: matrix.settings.platform == 'windows-latest'
+        run: |
+          copy fixed_pkg\makeCacheItemFromFilePath.js node_modules\.pnpm\node_modules\@contentlayer\source-files\dist\fetchData\makeCacheItemFromFilePath.js
+
+      - uses: tauri-apps/tauri-action@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.CYF_RELEASE_TOKEN }}
+          TAURI_PRIVATE_KEY: ${{ secrets.TAURI_PRIVATE_KEY }}
+          TAURI_KEY_PASSWORD: ${{ secrets.TAURI_KEY_PASSWORD }}
+          # code signing for macos
+          APPLE_CERTIFICATE: ${{ secrets.APPLE_CERTIFICATE }}
+          APPLE_CERTIFICATE_PASSWORD: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
+          APPLE_SIGNING_IDENTITY: ${{ secrets.APPLE_SIGNING_IDENTITY }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_PASSWORD: ${{ secrets.APPLE_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          GIT_COMMIT_SHA: ${{ github.sha }}
+          NEXT_PUBLIC_GOOGLE_ID: ${{ secrets.NEXT_PUBLIC_GOOGLE_ID }}
+        with:
+          tagName: ${{ github.event.inputs.env }} # the action automatically replaces \_\_VERSION\_\_ with the app version
+          releaseName: ${{ github.event.inputs.env }}
+          prerelease: true
+          args: ${{ matrix.settings.args }}
