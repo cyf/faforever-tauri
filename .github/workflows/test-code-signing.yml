@@ -19,11 +19,11 @@ jobs:
       matrix:
         settings:
           - platform: 'macos-latest'
-            args: '--target universal-apple-darwin'
+            args: '--target universal-apple-darwin --verbose'
           - platform: 'macos-latest'
-            args: '--target x86_64-apple-darwin'
+            args: '--target x86_64-apple-darwin --verbose'
           - platform: 'macos-latest'
-            args: '--target aarch64-apple-darwin'
+            args: '--target aarch64-apple-darwin --verbose'
 
     runs-on: ${{ matrix.settings.platform }}
     steps:
