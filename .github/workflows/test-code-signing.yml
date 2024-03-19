@@ -1,4 +1,4 @@
-name: Code Signing for macOS
+name: Code Signing
 
 on:
   # Enable manual run
@@ -19,11 +19,11 @@ jobs:
       matrix:
         settings:
           - platform: 'macos-latest'
-            args: '--target universal-apple-darwin --verbose'
+            args: '--target universal-apple-darwin'
           - platform: 'macos-latest'
-            args: '--target x86_64-apple-darwin --verbose'
+            args: '--target x86_64-apple-darwin'
           - platform: 'macos-latest'
-            args: '--target aarch64-apple-darwin --verbose'
+            args: '--target aarch64-apple-darwin'
 
     runs-on: ${{ matrix.settings.platform }}
     steps:
@@ -75,7 +75,7 @@ jobs:
           GIT_COMMIT_SHA: ${{ github.sha }}
           NEXT_PUBLIC_GOOGLE_ID: ${{ secrets.NEXT_PUBLIC_GOOGLE_ID }}
         with:
-          tagName: ${{ github.event.inputs.env }} # the action automatically replaces \_\_VERSION\_\_ with the app version
-          releaseName: ${{ github.event.inputs.env }}
+          tagName: ${{ github.event.inputs.version }} # the action automatically replaces \_\_VERSION\_\_ with the app version
+          releaseName: ${{ github.event.inputs.version }}
           prerelease: true
           args: ${{ matrix.settings.args }}
