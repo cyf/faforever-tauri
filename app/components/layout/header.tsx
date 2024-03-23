@@ -9,7 +9,7 @@ import { useAppTheme, useScroll } from "@/lib/hooks";
 import { isInApp } from "@/constants";
 import LngDropdown from "./lng-dropdown";
 import ThemeDropdown from "./theme-dropdown";
-import { LngProps } from "@/i18";
+import type { LngProps } from "@/i18";
 
 export default function Header(props: LngProps) {
   const t = useTranslations();
@@ -63,7 +63,7 @@ export default function Header(props: LngProps) {
       <div className="mx-5 flex h-16 max-w-screen-xl items-center justify-between xl:mx-auto">
         <Link
           href={`/${props.lng}`}
-          className="flex items-center font-display text-2xl"
+          className="font-display flex items-center text-2xl"
         >
           <Image
             src="/logo.png"
@@ -95,7 +95,7 @@ export default function Header(props: LngProps) {
             </li>
             <ShowContent isShow={!isInApp}>
               <li className="h-8 w-8 sm:h-9 sm:w-9">
-                <ThemeDropdown />
+                <ThemeDropdown lng={props.lng} />
               </li>
             </ShowContent>
           </ul>
