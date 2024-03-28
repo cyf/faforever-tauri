@@ -10,10 +10,6 @@
     {
       "allowedVersions": "18",
       "matchPackageNames": ["@types/node"]
-    },
-    {
-      "allowedVersions": "2",
-      "matchPackageNames": ["tsparticles"]
     }
   ]
 }
