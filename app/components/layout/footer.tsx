@@ -48,7 +48,7 @@ export default function Footer(props: LngProps) {
         {process.env.GIT_COMMIT_SHA && (
           <p className="flex items-center justify-center">
             <a
-              href={`https://github.com/cyf/faforever-next/commit/${process.env.GIT_COMMIT_SHA}`}
+              href={`https://github.com/cyf/faforever/commit/${process.env.GIT_COMMIT_SHA}`}
               target="_blank"
               className="hover:underline"
               rel="noreferrer"
