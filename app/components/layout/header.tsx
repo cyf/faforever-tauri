@@ -82,7 +82,7 @@ export default function Header(props: LngProps) {
             <li className="h-8 w-8 sm:h-9 sm:w-9">
               <div className="relative inline-block text-left">
                 <Link
-                  href="https://github.com/cyf/faforever-next"
+                  href="https://github.com/cyf/faforever"
                   target="_blank"
                   className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-full transition-all duration-75 focus:outline-none active:scale-95 sm:h-9 sm:w-9"
                 >
