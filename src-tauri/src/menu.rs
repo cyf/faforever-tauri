@@ -1,6 +1,6 @@
 use tauri::{api::shell::open, CustomMenuItem, Manager, Menu, Runtime, Submenu, WindowMenuEvent};
 
-const FF_NATIVE_LICENSE: &str = "https://github.com/cyf/faforever-next/blob/main/LICENSE";
+const FF_NATIVE_LICENSE: &str = "https://github.com/cyf/faforever/blob/main/LICENSE";
 const FF_PRIVACY_POLICY_URL: &str = "https://www.chenyifaer.com/faforever/en/legal/privacy/";
 
 #[derive(Clone, serde::Serialize)]
