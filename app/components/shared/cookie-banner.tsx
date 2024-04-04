@@ -1,6 +1,6 @@
 "use client";
 import Script from "next/script";
-import { LngProps } from "@/i18";
+import type { LngProps } from "@/types/i18";
 
 const CookieBanner = (props: LngProps) => {
   const NEXT_PUBLIC_COOKIE_BANNER_ID = process.env.NEXT_PUBLIC_COOKIE_BANNER_ID;

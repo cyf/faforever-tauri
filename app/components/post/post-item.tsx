@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import PostDate from "@/components/post/post-date";
-import { LngProps } from "@/i18";
+import type { LngProps } from "@/types/i18";
 
 export default function PostItem({ ...props }: Record<string, any> & LngProps) {
   return (

@@ -9,7 +9,7 @@ import { useAppTheme, useScroll } from "@/lib/hooks";
 import { isInApp } from "@/constants";
 import LngDropdown from "./lng-dropdown";
 import ThemeDropdown from "./theme-dropdown";
-import type { LngProps } from "@/i18";
+import type { LngProps } from "@/types/i18";
 
 export default function Header(props: LngProps) {
   const t = useTranslations();
