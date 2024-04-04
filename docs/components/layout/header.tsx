@@ -1,14 +1,13 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { Github } from "@/components/shared/icons";
 import { useScroll } from "@/lib/hooks";
 import LngDropdown from "./lng-dropdown";
 import ThemeDropdown from "./theme-dropdown";
-import { LngProps } from "@/i18next-lng";
 import { useTranslation } from "@/i18n/client";
 import { basePath } from "@/constants";
+import type { LngProps } from "@/types/i18next-lng";
 
 export default function Header(props: LngProps) {
   const { t } = useTranslation(props.lng, "header");
