@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { LngProps } from "@/i18next-lng";
 import { useTranslation } from "@/i18n/client";
+import type { LngProps } from "@/types/i18next-lng";
 
 function Footer(props: LngProps) {
   const { t } = useTranslation(props.lng, "footer");

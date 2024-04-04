@@ -1,16 +1,16 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import Balancer from "react-wrap-balancer";
+import GitHubPkg from "@/components/home/github-pkg";
 import { Apple, Linux, Microsoft } from "@/components/shared/icons";
 import { platforms } from "@/constants";
 import { latestRelease } from "@/request";
 import { useTranslation } from "@/i18n/client";
-import { LngProps } from "@/i18next-lng";
-import { Asset, Release } from "@/types/github";
-import { SystemOS } from "@/types/common";
-import Pkg from "@/components/home/pkg";
+import type { LngProps } from "@/types/i18next-lng";
+import type { Asset, Release } from "@/types/github";
+import type { SystemOS } from "@/types/common";
 
-export default function GithubRelease({ lng }: LngProps) {
+export default function GitHubRelease({ lng }: LngProps) {
   const { t } = useTranslation(lng, "common");
   const [loading, setLoading] = useState<boolean>(false);
   const [data, setData] = useState<Release>({});
@@ -70,37 +70,40 @@ export default function GithubRelease({ lng }: LngProps) {
     <>
       <div className="mt-10 grid w-full max-w-screen-xl animate-fade-up xl:px-0">
         <div className="flex items-center justify-center">
-          <div className="grid w-full grid-cols-1 gap-5 px-10 sm:grid-cols-2 sm:px-10 md:max-w-5xl md:grid-cols-4 lg:px-0">
-            <Pkg
+          <div className="grid w-full grid-cols-1 gap-5 px-10 sm:grid-cols-2 sm:px-10 md:grid-cols-3">
+            <GitHubPkg
               lng={lng}
               disabled={loading || error || !macos.length}
               assets={macos}
+              wrapperClassName="border border-gray-300 hover:border-gray-800 shadow-md"
             >
               <Apple className="h-7 w-7" />
               <p>
-                <span className="sm:inline-block">Apple</span>
+                <span className="sm:inline-block">macOS</span>
               </p>
-            </Pkg>
-            <Pkg
+            </GitHubPkg>
+            <GitHubPkg
               lng={lng}
               disabled={loading || error || !windows.length}
               assets={windows}
+              wrapperClassName="border border-gray-300 hover:border-gray-800 shadow-md"
             >
               <Microsoft className="h-7 w-7" />
               <p>
-                <span className="sm:inline-block">Microsoft</span>
+                <span className="sm:inline-block">Windows</span>
               </p>
-            </Pkg>
-            <Pkg
+            </GitHubPkg>
+            <GitHubPkg
               lng={lng}
               disabled={loading || error || !linux.length}
               assets={linux}
+              wrapperClassName="border border-gray-300 hover:border-gray-800 shadow-md"
             >
               <Linux className="h-7 w-7" />
               <p>
                 <span className="sm:inline-block">Linux</span>
               </p>
-            </Pkg>
+            </GitHubPkg>
           </div>
         </div>
       </div>
@@ -114,7 +117,7 @@ export default function GithubRelease({ lng }: LngProps) {
               {t("latest")}:{" "}
               <Link
                 className="text-red-400"
-                href={`https://github.com/cyf/homing_pigeon/releases/tag/${data?.tag_name}`}
+                href={`https://github.com/cyf/homing-pigeon/releases/tag/${data?.tag_name}`}
                 target="_blank"
               >
                 {data?.tag_name}
@@ -125,7 +128,7 @@ export default function GithubRelease({ lng }: LngProps) {
             href={`/${lng}/releases`}
             className="ml-2 text-sm text-gray-500 hover:underline dark:text-gray-400"
           >
-            More releases
+            {t("more-versions")}
           </Link>
         </Balancer>
       </p>
