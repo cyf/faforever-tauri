@@ -9,11 +9,13 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
-import { Button } from "@/components/ui/button";
+  Drawer,
+  DrawerContent,
+  DrawerTrigger,
+  Button,
+} from "muse-ui";
 import { languages } from "@/constants";
-import type { LngProps } from "@/i18";
+import type { LngProps } from "@/types/i18";
 
 export default function LngDropdown(props: LngProps) {
   const t = useTranslations("header");
@@ -43,7 +45,11 @@ export default function LngDropdown(props: LngProps) {
           <div className="w-full min-w-[14rem] rounded-md bg-white p-2 dark:bg-black">
             {languages.map((locale) => {
               return (
-                <DropdownMenuItem key={locale} disabled={locale === props.lng}>
+                <DropdownMenuItem
+                  key={locale}
+                  disabled={locale === props.lng}
+                  className="hover:bg-accent hover:text-accent-foreground focus-visible:ring-0 focus-visible:ring-offset-0"
+                >
                   <Link
                     key={locale}
                     href={redirectedPathName(locale)}

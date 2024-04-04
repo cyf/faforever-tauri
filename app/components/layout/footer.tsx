@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { LngProps } from "@/i18";
+import type { LngProps } from "@/types/i18";
 
 export default function Footer(props: LngProps) {
   const t = useTranslations();
