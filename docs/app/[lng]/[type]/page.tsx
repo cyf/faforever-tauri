@@ -42,7 +42,9 @@ export default async function Blog({
       <div className="pb-12 md:pb-20">
         {/* Page header */}
         <div className="max-w-3xl pb-12 text-center md:pb-20 md:text-left">
-          <h1 className="h1 mb-4">Blog</h1>
+          <h1 className="h1 mb-4 text-5xl font-bold">
+            {params.type.toUpperCase()}
+          </h1>
           {/*<p className="text-xl text-gray-600">*/}
           {/*  Stay up to date on the latest from Simple and best news from the Dev*/}
           {/*  world.*/}
