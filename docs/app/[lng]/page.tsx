@@ -32,10 +32,10 @@ export default function Home({
           <Link
             href={`/${post.slug}`}
             rel="noreferrer"
-            className="mx-auto mb-12 flex max-w-fit animate-fade-up items-center justify-center space-x-2 overflow-hidden rounded-full bg-blue-100 px-7 py-2 transition-colors hover:bg-blue-200"
+            className="mx-auto mb-12 flex max-w-fit animate-fade-up items-center justify-center space-x-2 overflow-hidden rounded-full bg-[#ff7979] bg-opacity-10 px-7 py-2 text-[#ff7979] transition-colors hover:bg-opacity-20 dark:bg-opacity-20 dark:hover:bg-opacity-30"
           >
-            <FaBlog className="h-5 w-5 text-[#1d9bf0]" />
-            <p className="text-sm font-semibold text-[#1d9bf0]">{post.title}</p>
+            <FaBlog className="h-5 w-5" />
+            <p className="text-sm font-semibold">{post.title}</p>
           </Link>
         )}
         <div className="mb-8 flex items-center justify-center space-x-20">
@@ -54,7 +54,7 @@ export default function Home({
           <Balancer>{t("title")}</Balancer>
         </h1>
         <p
-          className="mt-6 animate-fade-up text-center text-red-400 opacity-0 md:text-xl"
+          className="mt-6 animate-fade-up text-center text-[#ff7979] opacity-0 md:text-xl"
           style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
         >
           <Balancer>
@@ -62,7 +62,7 @@ export default function Home({
               animate
               type="highlight"
               show={true}
-              color="rgb(36, 54, 110)"
+              color="#c7ecee"
               animationDelay={1000}
               animationDuration={2500}
             >
