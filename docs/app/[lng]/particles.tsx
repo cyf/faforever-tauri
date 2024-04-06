@@ -2,8 +2,8 @@
 import React, { useCallback, useEffect, useState, useRef } from "react";
 import { loadFull } from "tsparticles";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import type { Engine, Container } from "@tsparticles/engine";
 import { useAppTheme } from "@/lib/hooks";
+import type { Engine, Container } from "@tsparticles/engine";
 
 export default function Particle() {
   const { resolvedTheme: theme } = useAppTheme();
@@ -21,7 +21,7 @@ export default function Particle() {
 
   useEffect(() => {
     const loadTheme = async () => {
-      if (particlesRef.current) {
+      if (particlesRef.current && ["light", "dark"].includes(theme)) {
         await particlesRef.current?.loadTheme(theme);
       }
     };
@@ -39,8 +39,7 @@ export default function Particle() {
       isShow: boolean;
       children: React.ReactElement;
     }) => (isShow ? children : null),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [theme, particlesRef.current],
+    [],
   );
 
   return (
