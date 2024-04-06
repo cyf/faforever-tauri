@@ -131,7 +131,7 @@ export default function Legal({
                   <div className="mt-6">
                     <Link
                       href={`/${params.lng}/${params.type}`}
-                      className="inline-flex items-center text-base font-medium text-[#ff7979] hover:underline"
+                      className="inline-flex items-center text-base font-medium text-[#0d47a1] hover:underline"
                     >
                       <svg
                         className="mr-2 h-3 w-3 shrink-0 fill-current"

@@ -39,7 +39,8 @@ export default function Particle() {
       isShow: boolean;
       children: React.ReactElement;
     }) => (isShow ? children : null),
-    [],
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [theme, particlesRef.current],
   );
 
   return (
@@ -80,10 +81,10 @@ export default function Particle() {
           },
           particles: {
             color: {
-              value: theme === "dark" ? "#ffffff" : "#0d47a1",
+              value: "#0d47a1",
             },
             links: {
-              color: theme === "dark" ? "#ffffff" : "#0d47a1",
+              color: "#0d47a1",
               distance: 150,
               enable: true,
               opacity: 0.5,
