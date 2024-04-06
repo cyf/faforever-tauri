@@ -82,7 +82,7 @@ export default function Release({
           </dd>
         </div>
         <GitHubPkg assets={release?.assets || []} lng={lng} disabled={false}>
-          <div className="flex cursor-pointer gap-x-2.5 text-gray-500 hover:text-[#ff7979] dark:text-gray-400 dark:hover:text-[#ff7979]">
+          <div className="flex cursor-pointer gap-x-2.5 text-gray-500 hover:text-[#0a60ff] dark:text-gray-400 dark:hover:text-[#0a60ff]">
             <dt>
               <span className="sr-only">Total assets</span>
               <FaDownload className="h-5 w-5" aria-hidden="true" />
