@@ -13,7 +13,7 @@
     "@emotion/is-prop-valid": "^1.2.2",
     "@octokit/rest": "^20.1.0",
     "@hookform/resolvers": "^3.3.4",
-    "@tanstack/react-table": "^8.15.3",
+    "@tanstack/react-table": "^8.16.0",
     "@tsparticles/engine": "^3.3.0",
     "@tsparticles/react": "^3.0.0",
     "accept-language": "^3.0.18",
