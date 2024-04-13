@@ -29,14 +29,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
-
       - name: setup node
         uses: actions/setup-node@v4
         with:
           node-version: 18
+
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 8
 
       - name: install Rust stable
         uses: dtolnay/rust-toolchain@stable
