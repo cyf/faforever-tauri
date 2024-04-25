@@ -10,7 +10,6 @@
     "format": "prettier --write \"./**/*.{css,js,json,jsx,ts,tsx}\""
   },
   "dependencies": {
-    "@emotion/is-prop-valid": "^1.2.2",
     "@octokit/rest": "^20.1.0",
     "@hookform/resolvers": "^3.3.4",
     "@tanstack/react-table": "^8.16.0",
@@ -19,42 +18,42 @@
     "accept-language": "^3.0.18",
     "class-variance-authority": "^0.7.0",
     "classnames": "^2.5.1",
-    "clsx": "^2.1.0",
+    "clsx": "^2.1.1",
     "cmdk": "^1.0.0",
     "contentlayer": "^0.3.4",
     "date-fns": "^3.6.0",
     "dayjs": "^1.11.10",
     "focus-trap-react": "^10.2.3",
-    "framer-motion": "^11.0.28",
+    "framer-motion": "^11.1.7",
     "http-status": "^1.7.4",
     "i18next": "^23.11.2",
     "i18next-browser-languagedetector": "^7.2.1",
     "i18next-resources-to-backend": "^1.2.1",
-    "joi": "^17.12.3",
-    "lucide-react": "^0.368.0",
+    "joi": "^17.13.0",
+    "lucide-react": "^0.373.0",
     "ms": "^2.1.3",
     "muse-ui": "^4.0.0-alpha.1",
     "next": "14.1.4",
     "next-contentlayer": "^0.3.4",
     "next-themes": "^0.3.0",
-    "nextjs-toploader": "^1.6.11",
+    "nextjs-toploader": "^1.6.12",
     "react": "18.2.0",
     "react-datalist-input": "^3.2.1",
-    "react-day-picker": "^8.10.0",
+    "react-day-picker": "^8.10.1",
     "react-dom": "18.2.0",
-    "react-hook-form": "^7.51.2",
-    "react-i18next": "^14.1.0",
+    "react-hook-form": "^7.51.3",
+    "react-i18next": "^14.1.1",
     "react-icons": "^5.1.0",
     "react-markdown": "^9.0.1",
     "react-rough-notation": "^1.0.5",
     "react-wrap-balancer": "^1.1.0",
     "rehype-slug": "^6.0.0",
-    "tailwind-merge": "^2.2.2",
+    "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
     "tsparticles": "^3.3.0",
     "use-debounce": "^10.0.0",
     "vaul": "^0.9.0",
-    "zod": "^3.22.4"
+    "zod": "^3.23.4"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.7",
@@ -76,7 +75,7 @@
   },
   "overrides": {
     "muse-ui": {
-      "react-hook-form": "^7.51.2"
+      "react-hook-form": "^7.51.3"
     }
   },
   "engines": {
