@@ -1,5 +1,9 @@
 # FaForever
 
+[![Publish](https://github.com/cyf/faforever/actions/workflows/publish.yml/badge.svg)](https://github.com/cyf/faforever/actions/workflows/publish.yml)
+[![GitHub Release](https://img.shields.io/github/v/release/cyf/faforever)](https://github.com/cyf/faforever/releases)
+[![GitHub License](https://img.shields.io/github/license/cyf/faforever)](https://github.com/cyf/faforever/blob/main/LICENSE)
+
 ## Setup
 
 Make sure to install the dependencies:
