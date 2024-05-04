@@ -32,7 +32,7 @@ importers:
     dependencies:
       '@hookform/resolvers':
         specifier: ^3.3.4
-        version: 3.3.4(react-hook-form@7.51.3(react@18.2.0))
+        version: 3.3.4(react-hook-form@7.51.4(react@18.2.0))
       '@tanstack/react-table':
         specifier: ^8.16.0
         version: 8.16.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -121,8 +121,8 @@ importers:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
       react-hook-form:
-        specifier: ^7.51.3
-        version: 7.51.3(react@18.2.0)
+        specifier: ^7.51.4
+        version: 7.51.4(react@18.2.0)
       react-icons:
         specifier: ^5.2.0
         version: 5.2.0(react@18.2.0)
@@ -213,7 +213,7 @@ importers:
     dependencies:
       '@hookform/resolvers':
         specifier: ^3.3.4
-        version: 3.3.4(react-hook-form@7.51.3(react@18.2.0))
+        version: 3.3.4(react-hook-form@7.51.4(react@18.2.0))
       '@octokit/rest':
         specifier: ^20.1.0
         version: 20.1.0
@@ -305,8 +305,8 @@ importers:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
       react-hook-form:
-        specifier: ^7.51.3
-        version: 7.51.3(react@18.2.0)
+        specifier: ^7.51.4
+        version: 7.51.4(react@18.2.0)
       react-i18next:
         specifier: ^14.1.1
         version: 14.1.1(i18next@23.11.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -7808,8 +7808,8 @@ packages:
   react-error-overlay@6.0.11:
     resolution: {integrity: sha512-/6UZ2qgEyH2aqzYZgQPxEnz33NJ2gNsnHA2o5+o4wW9bLM/JYQitNP9xPhsXwC08hMMovfGe/8retsdDsczPRg==}
 
-  react-hook-form@7.51.3:
-    resolution: {integrity: sha512-cvJ/wbHdhYx8aviSWh28w9ImjmVsb5Y05n1+FW786vEZQJV5STNM0pW6ujS+oiBecb0ARBxJFyAnXj9+GHXACQ==}
+  react-hook-form@7.51.4:
+    resolution: {integrity: sha512-V14i8SEkh+V1gs6YtD0hdHYnoL4tp/HX/A45wWQN15CYr9bFRmmRdYStSO5L65lCCZRF+kYiSKhm9alqbcdiVA==}
     engines: {node: '>=12.22.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18
@@ -10693,9 +10693,9 @@ snapshots:
     dependencies:
       '@hapi/hoek': 9.3.0
 
-  '@hookform/resolvers@3.3.4(react-hook-form@7.51.3(react@18.2.0))':
+  '@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.2.0))':
     dependencies:
-      react-hook-form: 7.51.3(react@18.2.0)
+      react-hook-form: 7.51.4(react@18.2.0)
 
   '@humanwhocodes/config-array@0.11.14':
     dependencies:
@@ -17190,7 +17190,7 @@ snapshots:
   muse-ui@4.0.0-alpha.1(@babel/core@7.24.4)(@opentelemetry/api@1.8.0)(@types/react-dom@18.2.25)(@types/react@18.2.79)(embla-carousel@8.0.0-rc15)(esbuild@0.17.19):
     dependencies:
       '@faker-js/faker': 8.4.1
-      '@hookform/resolvers': 3.3.4(react-hook-form@7.51.3(react@18.2.0))
+      '@hookform/resolvers': 3.3.4(react-hook-form@7.51.4(react@18.2.0))
       '@radix-ui/react-accessible-icon': 1.0.3(@types/react-dom@18.2.25)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@radix-ui/react-accordion': 1.1.2(@types/react-dom@18.2.25)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@radix-ui/react-alert-dialog': 1.0.5(@types/react-dom@18.2.25)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -17243,7 +17243,7 @@ snapshots:
       react: 18.2.0
       react-day-picker: 8.10.1(date-fns@2.30.0)(react@18.2.0)
       react-dom: 18.2.0(react@18.2.0)
-      react-hook-form: 7.51.3(react@18.2.0)
+      react-hook-form: 7.51.4(react@18.2.0)
       react-resizable-panels: 0.0.55(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react-wrap-balancer: 0.4.1(react@18.2.0)
       recharts: 2.12.6(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -18310,7 +18310,7 @@ snapshots:
 
   react-error-overlay@6.0.11: {}
 
-  react-hook-form@7.51.3(react@18.2.0):
+  react-hook-form@7.51.4(react@18.2.0):
     dependencies:
       react: 18.2.0
 
