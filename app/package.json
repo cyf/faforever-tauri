@@ -24,7 +24,7 @@
     "date-fns": "^3.6.0",
     "dayjs": "^1.11.11",
     "focus-trap-react": "^10.2.3",
-    "framer-motion": "^11.1.7",
+    "framer-motion": "^11.1.9",
     "leva": "0.9.35",
     "js-cookie": "^3.0.5",
     "lodash": "^4.17.21",

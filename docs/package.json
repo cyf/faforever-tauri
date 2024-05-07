@@ -24,7 +24,7 @@
     "date-fns": "^3.6.0",
     "dayjs": "^1.11.11",
     "focus-trap-react": "^10.2.3",
-    "framer-motion": "^11.1.7",
+    "framer-motion": "^11.1.9",
     "http-status": "^1.7.4",
     "i18next": "^23.11.3",
     "i18next-browser-languagedetector": "^7.2.1",
