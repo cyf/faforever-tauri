@@ -13,7 +13,7 @@ fn theme_changed(name: &str) {
 
 #[tauri::command]
 async fn open_docs(handle: tauri::AppHandle) {
-    let docs_window = tauri::WindowBuilder::new(
+    tauri::WindowBuilder::new(
         &handle,
         "docs", /* the unique window label */
         tauri::WindowUrl::External("https://tauri.app/".parse().unwrap())
