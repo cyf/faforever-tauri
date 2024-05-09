@@ -1,7 +1,7 @@
 {
   "name": "faforever",
   "private": true,
-  "version": "0.0.0+17",
+  "version": "0.0.0+18",
   "type": "module",
   "scripts": {
     "build": "tauri build",
@@ -26,5 +26,5 @@
   "engines": {
     "node": "^18"
   },
-  "packageManager": "pnpm@9.0.6"
+  "packageManager": "pnpm@9.1.0"
 }
