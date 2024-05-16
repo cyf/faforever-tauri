@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.4.0",
-    "@tanstack/react-table": "^8.17.0",
+    "@tanstack/react-table": "^8.17.3",
     "@tauri-apps/api": "^1.5.5",
     "@tsparticles/engine": "^3.4.0",
     "@tsparticles/react": "^3.0.0",
