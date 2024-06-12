@@ -1,8 +1,9 @@
 import httpStatus from "http-status";
 import github from "@/lib/github";
+import { NextResponse } from "next/server";
 
 // https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config
-// export const dynamic = "force-dynamic";
+export const dynamic = "force-dynamic";
 export const fetchCache = "force-no-store";
 
 export async function GET() {
@@ -12,12 +13,12 @@ export async function GET() {
       repo: process.env.GH_REPO,
     });
 
-    return Response.json(
+    return NextResponse.json(
       { code: 0, data: latestRelease.data, timestamp: Date.now() },
       { status: httpStatus.OK },
     );
   } catch (error: any) {
-    return Response.json(
+    return NextResponse.json(
       {
         code: -1,
         error: error.message || error.toString(),
