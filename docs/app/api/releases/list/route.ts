@@ -4,8 +4,8 @@ import github from "@/lib/github";
 import schema from "@/schema";
 
 // https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config
-export const dynamic = "force-dynamic";
-// export const fetchCache = "force-no-store";
+// export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);

@@ -8,6 +8,7 @@ export async function latestRelease() {
     headers,
     // https://nextjs.org/docs/app/building-your-application/caching
     cache: "no-store",
+    next: { revalidate: 0 },
   });
 
   if (!resp.ok) {
@@ -32,6 +33,7 @@ export async function getReleases(
       headers,
       // https://nextjs.org/docs/app/building-your-application/caching
       cache: "no-store",
+      next: { revalidate: 0 },
     },
   );
 
