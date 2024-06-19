@@ -14,7 +14,7 @@ importers:
     devDependencies:
       '@commitlint/cli':
         specifier: ^19.3.0
-        version: 19.3.0(@types/node@18.19.34)(typescript@5.4.5)
+        version: 19.3.0(@types/node@18.19.37)(typescript@5.4.5)
       '@commitlint/config-conventional':
         specifier: ^19.2.2
         version: 19.2.2
@@ -32,7 +32,7 @@ importers:
     dependencies:
       '@hookform/resolvers':
         specifier: ^3.6.0
-        version: 3.6.0(react-hook-form@7.51.5(react@18.3.1))
+        version: 3.6.0(react-hook-form@7.52.0(react@18.3.1))
       '@tanstack/react-table':
         specifier: ^8.17.3
         version: 8.17.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -73,8 +73,8 @@ importers:
         specifier: ^10.2.3
         version: 10.2.3(prop-types@15.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       framer-motion:
-        specifier: ^11.2.10
-        version: 11.2.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^11.2.11
+        version: 11.2.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       js-cookie:
         specifier: ^3.0.5
         version: 3.0.5
@@ -100,8 +100,8 @@ importers:
         specifier: ^0.3.4
         version: 0.3.4(contentlayer@0.3.4(esbuild@0.17.19)(markdown-wasm@1.2.0))(esbuild@0.17.19)(markdown-wasm@1.2.0)(next@14.2.4(@babel/core@7.24.4)(@opentelemetry/api@1.8.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next-intl:
-        specifier: ^3.15.0
-        version: 3.15.0(next@14.2.4(@babel/core@7.24.4)(@opentelemetry/api@1.8.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+        specifier: ^3.15.2
+        version: 3.15.2(next@14.2.4(@babel/core@7.24.4)(@opentelemetry/api@1.8.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       next-themes:
         specifier: ^0.3.0
         version: 0.3.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -121,8 +121,8 @@ importers:
         specifier: 18.3.1
         version: 18.3.1(react@18.3.1)
       react-hook-form:
-        specifier: ^7.51.5
-        version: 7.51.5(react@18.3.1)
+        specifier: ^7.52.0
+        version: 7.52.0(react@18.3.1)
       react-icons:
         specifier: ^5.2.1
         version: 5.2.1(react@18.3.1)
@@ -176,8 +176,8 @@ importers:
         specifier: ^0.7.34
         version: 0.7.34
       '@types/node':
-        specifier: ^18.19.34
-        version: 18.19.34
+        specifier: ^18.19.37
+        version: 18.19.37
       '@types/react':
         specifier: ^18.3.3
         version: 18.3.3
@@ -200,8 +200,8 @@ importers:
         specifier: ^3.3.2
         version: 3.3.2
       prettier-plugin-tailwindcss:
-        specifier: ^0.6.4
-        version: 0.6.4(prettier@3.3.2)
+        specifier: ^0.6.5
+        version: 0.6.5(prettier@3.3.2)
       tailwindcss:
         specifier: ^3.4.4
         version: 3.4.4
@@ -213,7 +213,7 @@ importers:
     dependencies:
       '@hookform/resolvers':
         specifier: ^3.6.0
-        version: 3.6.0(react-hook-form@7.51.5(react@18.3.1))
+        version: 3.6.0(react-hook-form@7.52.0(react@18.3.1))
       '@octokit/rest':
         specifier: ^20.1.1
         version: 20.1.1
@@ -254,8 +254,8 @@ importers:
         specifier: ^10.2.3
         version: 10.2.3(prop-types@15.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       framer-motion:
-        specifier: ^11.2.10
-        version: 11.2.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^11.2.11
+        version: 11.2.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       http-status:
         specifier: ^1.7.4
         version: 1.7.4
@@ -269,8 +269,8 @@ importers:
         specifier: ^1.2.1
         version: 1.2.1
       joi:
-        specifier: ^17.13.1
-        version: 17.13.1
+        specifier: ^17.13.3
+        version: 17.13.3
       lucide-react:
         specifier: ^0.395.0
         version: 0.395.0(react@18.3.1)
@@ -305,8 +305,8 @@ importers:
         specifier: 18.3.1
         version: 18.3.1(react@18.3.1)
       react-hook-form:
-        specifier: ^7.51.5
-        version: 7.51.5(react@18.3.1)
+        specifier: ^7.52.0
+        version: 7.52.0(react@18.3.1)
       react-i18next:
         specifier: ^14.1.2
         version: 14.1.2(i18next@23.11.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -357,8 +357,8 @@ importers:
         specifier: ^0.7.34
         version: 0.7.34
       '@types/node':
-        specifier: 18.19.34
-        version: 18.19.34
+        specifier: 18.19.37
+        version: 18.19.37
       '@types/react':
         specifier: 18.3.3
         version: 18.3.3
@@ -381,8 +381,8 @@ importers:
         specifier: ^3.3.2
         version: 3.3.2
       prettier-plugin-tailwindcss:
-        specifier: ^0.6.4
-        version: 0.6.4(prettier@3.3.2)
+        specifier: ^0.6.5
+        version: 0.6.5(prettier@3.3.2)
       prop-types:
         specifier: ^15.8.1
         version: 15.8.1
@@ -1538,17 +1538,17 @@ packages:
   '@floating-ui/utils@0.2.1':
     resolution: {integrity: sha512-9TANp6GPoMtYzQdt54kfAyMmz1+osLlXdg2ENroU7zzrtflTLrrC/lgrIfaSe+Wu0b89GKccT7vxXA0MoAIO+Q==}
 
-  '@formatjs/ecma402-abstract@1.18.2':
-    resolution: {integrity: sha512-+QoPW4csYALsQIl8GbN14igZzDbuwzcpWrku9nyMXlaqAlwRBgl5V+p0vWMGFqHOw37czNXaP/lEk4wbLgcmtA==}
+  '@formatjs/ecma402-abstract@2.0.0':
+    resolution: {integrity: sha512-rRqXOqdFmk7RYvj4khklyqzcfQl9vEL/usogncBHRZfZBDOwMGuSRNFl02fu5KGHXdbinju+YXyuR+Nk8xlr/g==}
 
   '@formatjs/fast-memoize@2.2.0':
     resolution: {integrity: sha512-hnk/nY8FyrL5YxwP9e4r9dqeM6cAbo8PeU9UjyXojZMNvVad2Z06FAVHyR3Ecw6fza+0GH7vdJgiKIVXTMbSBA==}
 
-  '@formatjs/icu-messageformat-parser@2.7.6':
-    resolution: {integrity: sha512-etVau26po9+eewJKYoiBKP6743I1br0/Ie00Pb/S/PtmYfmjTcOn2YCh2yNkSZI12h6Rg+BOgQYborXk46BvkA==}
+  '@formatjs/icu-messageformat-parser@2.7.8':
+    resolution: {integrity: sha512-nBZJYmhpcSX0WeJ5SDYUkZ42AgR3xiyhNCsQweFx3cz/ULJjym8bHAzWKvG5e2+1XO98dBYC0fWeeAECAVSwLA==}
 
-  '@formatjs/icu-skeleton-parser@1.8.0':
-    resolution: {integrity: sha512-QWLAYvM0n8hv7Nq5BEs4LKIjevpVpbGLAJgOaYzg9wABEoX1j0JO1q2/jVkO6CVlq0dbsxZCngS5aXbysYueqA==}
+  '@formatjs/icu-skeleton-parser@1.8.2':
+    resolution: {integrity: sha512-k4ERKgw7aKGWJZgTarIcNEmvyTVD9FYh0mTrrBMHZ1b8hUu6iOJ4SzsZlo3UNAvHYa+PnvntIwRPt1/vy4nA9Q==}
 
   '@formatjs/intl-localematcher@0.2.32':
     resolution: {integrity: sha512-k/MEBstff4sttohyEpXxCmC3MqbUn9VvHGlZ8fauLzkbwXmVrEeyzS+4uhrvAk9DWU9/7otYWxyDox4nT/KVLQ==}
@@ -3293,8 +3293,8 @@ packages:
   '@types/node-forge@1.3.11':
     resolution: {integrity: sha512-FQx220y22OKNTqaByeBGqHWYz4cl94tpcxeFdvBo3wjG6XPBuZ0BNgNZRV5J5TFmmcsJ4IzsLkmGRiQbnYsBEQ==}
 
-  '@types/node@18.19.34':
-    resolution: {integrity: sha512-eXF4pfBNV5DAMKGbI02NnDtWrQ40hAN558/2vvS4gMpMIxaf6JmD7YjnZbq0Q9TDSSkKBamime8ewRoomHdt4g==}
+  '@types/node@18.19.37':
+    resolution: {integrity: sha512-Pi53fdVMk7Ig5IfAMltQQMgtY7xLzHaEous8IQasYsdQbYK3v90FkxI3XYQCe/Qme58pqp14lXJIsFmGP8VoZQ==}
 
   '@types/parse-json@4.0.2':
     resolution: {integrity: sha512-dISoDXWWQwUquiKsyZ4Ng+HX2KsPL7LyHKHQwgGFEA3IaKac4Obd+h2a/a6waisAoepJlBcx9paWqjA8/HVjCw==}
@@ -5255,8 +5255,8 @@ packages:
   fraction.js@4.3.7:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
 
-  framer-motion@11.2.10:
-    resolution: {integrity: sha512-/gr3PLZUVFCc86a9MqCUboVrALscrdluzTb3yew+2/qKBU8CX6nzs918/SRBRCqaPbx0TZP10CB6yFgK2C5cYQ==}
+  framer-motion@11.2.11:
+    resolution: {integrity: sha512-n+ozoEzgJu/2h9NoQMokF+CwNqIRVyuRC4RwMPwklfrrTjbVV32k9uBIgqYAwn7Jfpt5LuDVCtT57MWz1FbaLw==}
     peerDependencies:
       '@emotion/is-prop-valid': '*'
       react: ^18.0.0
@@ -5719,8 +5719,8 @@ packages:
     resolution: {integrity: sha512-5Hh7Y1wQbvY5ooGgPbDaL5iYLAPzMTUrjMulskHLH6wnv/A+1q5rgEaiuqEjB+oxGXIVZs1FF+R/KPN3ZSQYYg==}
     engines: {node: '>=12'}
 
-  intl-messageformat@10.5.11:
-    resolution: {integrity: sha512-eYq5fkFBVxc7GIFDzpFQkDOZgNayNTQn4Oufe8jw6YY6OHVw70/4pA3FyCsQ0Gb2DnvEJEMmN2tOaXUGByM+kg==}
+  intl-messageformat@10.5.14:
+    resolution: {integrity: sha512-IjC6sI0X7YRjjyVH9aUgdftcmZK7WXdHeil4KwbjDnRWjnVitKpAx3rr6t6di1joFp5188VqKcobOPA6mCLG/w==}
 
   invariant@2.2.4:
     resolution: {integrity: sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==}
@@ -6161,8 +6161,8 @@ packages:
     resolution: {integrity: sha512-gFqAIbuKyyso/3G2qhiO2OM6shY6EPP/R0+mkDbyspxKazh8BXDC5FiFsUjlczgdNz/vfra0da2y+aHrusLG/Q==}
     hasBin: true
 
-  joi@17.13.1:
-    resolution: {integrity: sha512-vaBlIKCyo4FCUtCm7Eu4QZd/q02bWcxfUO6YSXAZOWF6gzcLBeba8kwotUdYJjDLW8Cz8RywsSOqiNJZW0mNvg==}
+  joi@17.13.3:
+    resolution: {integrity: sha512-otDA4ldcIx+ZXsKHWmp0YizCweVRZG96J10b0FevjfuncLO1oX59THoAmHkNubYJ+9gWsYsp5k8v4ib6oDv1fA==}
 
   jotai@2.8.0:
     resolution: {integrity: sha512-yZNMC36FdLOksOr8qga0yLf14miCJlEThlp5DeFJNnqzm2+ZG7wLcJzoOyij5K6U6Xlc5ljQqPDlJRgqW0Y18g==}
@@ -6849,8 +6849,8 @@ packages:
       react: '*'
       react-dom: '*'
 
-  next-intl@3.15.0:
-    resolution: {integrity: sha512-mccmy6oIbgV3QY2GsgHrgRLoEYYVEIXa+hEaK6OBeG3zYJ+H5AACVBAhLcf+5ctY06RFr95hYt1XcJJ+bNtkag==}
+  next-intl@3.15.2:
+    resolution: {integrity: sha512-OkKHvsnLiX3brG78I+DYHn9mz3Ui+fsXS8iHi8ulxr89wBrVu78CSVin7sMe+snGZuh4wg+aedbOUPwPr2OKVg==}
     peerDependencies:
       next: ^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0 || ^14.0.0
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -7638,8 +7638,8 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
-  prettier-plugin-tailwindcss@0.6.4:
-    resolution: {integrity: sha512-3vhbIvlKyAWPaw9bUr2cw6M1BGx2Oy9CCLJyv+nxEiBGCTcL69WcAz2IFMGqx8IXSzQCInGSo2ujAByg9poHLQ==}
+  prettier-plugin-tailwindcss@0.6.5:
+    resolution: {integrity: sha512-axfeOArc/RiGHjOIy9HytehlC0ZLeMaqY09mm8YCkMzznKiDkwFzOpBvtuhuv3xG5qB73+Mj7OCe2j/L1ryfuQ==}
     engines: {node: '>=14.21.3'}
     peerDependencies:
       '@ianvs/prettier-plugin-sort-imports': '*'
@@ -7829,11 +7829,11 @@ packages:
   react-error-overlay@6.0.11:
     resolution: {integrity: sha512-/6UZ2qgEyH2aqzYZgQPxEnz33NJ2gNsnHA2o5+o4wW9bLM/JYQitNP9xPhsXwC08hMMovfGe/8retsdDsczPRg==}
 
-  react-hook-form@7.51.5:
-    resolution: {integrity: sha512-J2ILT5gWx1XUIJRETiA7M19iXHlG74+6O3KApzvqB/w8S5NQR7AbU8HVZrMALdmDgWpRPYiZJl0zx8Z4L2mP6Q==}
+  react-hook-form@7.52.0:
+    resolution: {integrity: sha512-mJX506Xc6mirzLsmXUJyqlAI3Kj9Ph2RhplYhUVffeOQSnubK2uVqBFOBJmvKikvbFV91pxVXmDiR+QMF19x6A==}
     engines: {node: '>=12.22.0'}
     peerDependencies:
-      react: ^16.8.0 || ^17 || ^18
+      react: ^16.8.0 || ^17 || ^18 || ^19
 
   react-i18next@14.1.2:
     resolution: {integrity: sha512-FSIcJy6oauJbGEXfhUgVeLzvWBhIBIS+/9c6Lj4niwKZyGaGb4V4vUbATXSlsHJDXXB+ociNxqFNiFuV1gmoqg==}
@@ -8966,8 +8966,8 @@ packages:
     peerDependencies:
       react: '>=16.8.0'
 
-  use-intl@3.15.0:
-    resolution: {integrity: sha512-vPCa7nbmH3RLfsy4pLLag8PvlzxQYHd5CkPE/AobkX72NE7JjhXk9UFtuFmD1UWiwQzM7njysnuwQlhtV6vV2Q==}
+  use-intl@3.15.2:
+    resolution: {integrity: sha512-dYq8bMjFXwtsZti2j6Z8KeIKV0XeNXmUX9M6/8wShOk9iYd2+0rMyAgJ4hbu/vDKDoOpAWAXcRKhqGz6kpnzOQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
 
@@ -10234,11 +10234,11 @@ snapshots:
 
   '@bcoe/v8-coverage@0.2.3': {}
 
-  '@commitlint/cli@19.3.0(@types/node@18.19.34)(typescript@5.4.5)':
+  '@commitlint/cli@19.3.0(@types/node@18.19.37)(typescript@5.4.5)':
     dependencies:
       '@commitlint/format': 19.3.0
       '@commitlint/lint': 19.2.2
-      '@commitlint/load': 19.2.0(@types/node@18.19.34)(typescript@5.4.5)
+      '@commitlint/load': 19.2.0(@types/node@18.19.37)(typescript@5.4.5)
       '@commitlint/read': 19.2.1
       '@commitlint/types': 19.0.3
       execa: 8.0.1
@@ -10285,7 +10285,7 @@ snapshots:
       '@commitlint/rules': 19.0.3
       '@commitlint/types': 19.0.3
 
-  '@commitlint/load@19.2.0(@types/node@18.19.34)(typescript@5.4.5)':
+  '@commitlint/load@19.2.0(@types/node@18.19.37)(typescript@5.4.5)':
     dependencies:
       '@commitlint/config-validator': 19.0.3
       '@commitlint/execute-rule': 19.0.0
@@ -10293,7 +10293,7 @@ snapshots:
       '@commitlint/types': 19.0.3
       chalk: 5.3.0
       cosmiconfig: 9.0.0(typescript@5.4.5)
-      cosmiconfig-typescript-loader: 5.0.0(@types/node@18.19.34)(cosmiconfig@9.0.0(typescript@5.4.5))(typescript@5.4.5)
+      cosmiconfig-typescript-loader: 5.0.0(@types/node@18.19.37)(cosmiconfig@9.0.0(typescript@5.4.5))(typescript@5.4.5)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -10670,7 +10670,7 @@ snapshots:
 
   '@floating-ui/utils@0.2.1': {}
 
-  '@formatjs/ecma402-abstract@1.18.2':
+  '@formatjs/ecma402-abstract@2.0.0':
     dependencies:
       '@formatjs/intl-localematcher': 0.5.4
       tslib: 2.6.2
@@ -10679,15 +10679,15 @@ snapshots:
     dependencies:
       tslib: 2.6.2
 
-  '@formatjs/icu-messageformat-parser@2.7.6':
+  '@formatjs/icu-messageformat-parser@2.7.8':
     dependencies:
-      '@formatjs/ecma402-abstract': 1.18.2
-      '@formatjs/icu-skeleton-parser': 1.8.0
+      '@formatjs/ecma402-abstract': 2.0.0
+      '@formatjs/icu-skeleton-parser': 1.8.2
       tslib: 2.6.2
 
-  '@formatjs/icu-skeleton-parser@1.8.0':
+  '@formatjs/icu-skeleton-parser@1.8.2':
     dependencies:
-      '@formatjs/ecma402-abstract': 1.18.2
+      '@formatjs/ecma402-abstract': 2.0.0
       tslib: 2.6.2
 
   '@formatjs/intl-localematcher@0.2.32':
@@ -10716,9 +10716,9 @@ snapshots:
     dependencies:
       '@hapi/hoek': 9.3.0
 
-  '@hookform/resolvers@3.6.0(react-hook-form@7.51.5(react@18.3.1))':
+  '@hookform/resolvers@3.6.0(react-hook-form@7.52.0(react@18.3.1))':
     dependencies:
-      react-hook-form: 7.51.5(react@18.3.1)
+      react-hook-form: 7.52.0(react@18.3.1)
 
   '@humanwhocodes/config-array@0.11.14':
     dependencies:
@@ -10754,7 +10754,7 @@ snapshots:
   '@jest/console@27.5.1':
     dependencies:
       '@jest/types': 27.5.1
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
       chalk: 4.1.2
       jest-message-util: 27.5.1
       jest-util: 27.5.1
@@ -10763,7 +10763,7 @@ snapshots:
   '@jest/console@28.1.3':
     dependencies:
       '@jest/types': 28.1.3
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
       chalk: 4.1.2
       jest-message-util: 28.1.3
       jest-util: 28.1.3
@@ -10776,7 +10776,7 @@ snapshots:
       '@jest/test-result': 27.5.1
       '@jest/transform': 27.5.1
       '@jest/types': 27.5.1
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       emittery: 0.8.1
@@ -10810,14 +10810,14 @@ snapshots:
     dependencies:
       '@jest/fake-timers': 27.5.1
       '@jest/types': 27.5.1
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
       jest-mock: 27.5.1
 
   '@jest/fake-timers@27.5.1':
     dependencies:
       '@jest/types': 27.5.1
       '@sinonjs/fake-timers': 8.1.0
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
       jest-message-util: 27.5.1
       jest-mock: 27.5.1
       jest-util: 27.5.1
@@ -10835,7 +10835,7 @@ snapshots:
       '@jest/test-result': 27.5.1
       '@jest/transform': 27.5.1
       '@jest/types': 27.5.1
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
       chalk: 4.1.2
       collect-v8-coverage: 1.0.2
       exit: 0.1.2
@@ -10915,7 +10915,7 @@ snapshots:
     dependencies:
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
       '@types/yargs': 16.0.9
       chalk: 4.1.2
 
@@ -10924,7 +10924,7 @@ snapshots:
       '@jest/schemas': 28.1.3
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
       '@types/yargs': 17.0.32
       chalk: 4.1.2
 
@@ -12610,24 +12610,24 @@ snapshots:
   '@types/body-parser@1.19.5':
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
 
   '@types/bonjour@3.5.13':
     dependencies:
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
 
   '@types/connect-history-api-fallback@1.5.4':
     dependencies:
       '@types/express-serve-static-core': 4.19.0
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
 
   '@types/conventional-commits-parser@5.0.0':
     dependencies:
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
 
   '@types/d3-array@3.2.1': {}
 
@@ -12677,7 +12677,7 @@ snapshots:
 
   '@types/express-serve-static-core@4.19.0':
     dependencies:
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
       '@types/qs': 6.9.15
       '@types/range-parser': 1.2.7
       '@types/send': 0.17.4
@@ -12691,7 +12691,7 @@ snapshots:
 
   '@types/graceful-fs@4.1.9':
     dependencies:
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
 
   '@types/hast@2.3.10':
     dependencies:
@@ -12707,7 +12707,7 @@ snapshots:
 
   '@types/http-proxy@1.17.14':
     dependencies:
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
 
   '@types/istanbul-lib-coverage@2.0.6': {}
 
@@ -12741,9 +12741,9 @@ snapshots:
 
   '@types/node-forge@1.3.11':
     dependencies:
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
 
-  '@types/node@18.19.34':
+  '@types/node@18.19.37':
     dependencies:
       undici-types: 5.26.5
 
@@ -12772,7 +12772,7 @@ snapshots:
 
   '@types/resolve@1.17.1':
     dependencies:
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
 
   '@types/resolve@1.20.6': {}
 
@@ -12783,7 +12783,7 @@ snapshots:
   '@types/send@0.17.4':
     dependencies:
       '@types/mime': 1.3.5
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
 
   '@types/serve-index@1.9.4':
     dependencies:
@@ -12792,12 +12792,12 @@ snapshots:
   '@types/serve-static@1.15.7':
     dependencies:
       '@types/http-errors': 2.0.4
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
       '@types/send': 0.17.4
 
   '@types/sockjs@0.3.36':
     dependencies:
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
 
   '@types/stack-utils@2.0.3': {}
 
@@ -12809,7 +12809,7 @@ snapshots:
 
   '@types/ws@8.5.10':
     dependencies:
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
 
   '@types/yargs-parser@21.0.3': {}
 
@@ -13846,9 +13846,9 @@ snapshots:
 
   core-util-is@1.0.3: {}
 
-  cosmiconfig-typescript-loader@5.0.0(@types/node@18.19.34)(cosmiconfig@9.0.0(typescript@5.4.5))(typescript@5.4.5):
+  cosmiconfig-typescript-loader@5.0.0(@types/node@18.19.37)(cosmiconfig@9.0.0(typescript@5.4.5))(typescript@5.4.5):
     dependencies:
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
       cosmiconfig: 9.0.0(typescript@5.4.5)
       jiti: 1.21.0
       typescript: 5.4.5
@@ -15053,7 +15053,7 @@ snapshots:
 
   fraction.js@4.3.7: {}
 
-  framer-motion@11.2.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  framer-motion@11.2.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       tslib: 2.6.2
     optionalDependencies:
@@ -15575,11 +15575,11 @@ snapshots:
 
   internmap@2.0.3: {}
 
-  intl-messageformat@10.5.11:
+  intl-messageformat@10.5.14:
     dependencies:
-      '@formatjs/ecma402-abstract': 1.18.2
+      '@formatjs/ecma402-abstract': 2.0.0
       '@formatjs/fast-memoize': 2.2.0
-      '@formatjs/icu-messageformat-parser': 2.7.6
+      '@formatjs/icu-messageformat-parser': 2.7.8
       tslib: 2.6.2
 
   invariant@2.2.4:
@@ -15830,7 +15830,7 @@ snapshots:
       '@jest/environment': 27.5.1
       '@jest/test-result': 27.5.1
       '@jest/types': 27.5.1
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
       chalk: 4.1.2
       co: 4.6.0
       dedent: 0.7.0
@@ -15926,7 +15926,7 @@ snapshots:
       '@jest/environment': 27.5.1
       '@jest/fake-timers': 27.5.1
       '@jest/types': 27.5.1
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
       jest-mock: 27.5.1
       jest-util: 27.5.1
       jsdom: 16.7.0
@@ -15941,7 +15941,7 @@ snapshots:
       '@jest/environment': 27.5.1
       '@jest/fake-timers': 27.5.1
       '@jest/types': 27.5.1
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
       jest-mock: 27.5.1
       jest-util: 27.5.1
 
@@ -15951,7 +15951,7 @@ snapshots:
     dependencies:
       '@jest/types': 27.5.1
       '@types/graceful-fs': 4.1.9
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
       anymatch: 3.1.3
       fb-watchman: 2.0.2
       graceful-fs: 4.2.11
@@ -15970,7 +15970,7 @@ snapshots:
       '@jest/source-map': 27.5.1
       '@jest/test-result': 27.5.1
       '@jest/types': 27.5.1
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
       chalk: 4.1.2
       co: 4.6.0
       expect: 27.5.1
@@ -16025,7 +16025,7 @@ snapshots:
   jest-mock@27.5.1:
     dependencies:
       '@jest/types': 27.5.1
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
 
   jest-pnp-resolver@1.2.3(jest-resolve@27.5.1):
     optionalDependencies:
@@ -16063,7 +16063,7 @@ snapshots:
       '@jest/test-result': 27.5.1
       '@jest/transform': 27.5.1
       '@jest/types': 27.5.1
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
       chalk: 4.1.2
       emittery: 0.8.1
       graceful-fs: 4.2.11
@@ -16114,7 +16114,7 @@ snapshots:
 
   jest-serializer@27.5.1:
     dependencies:
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
       graceful-fs: 4.2.11
 
   jest-snapshot@27.5.1:
@@ -16147,7 +16147,7 @@ snapshots:
   jest-util@27.5.1:
     dependencies:
       '@jest/types': 27.5.1
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
       chalk: 4.1.2
       ci-info: 3.9.0
       graceful-fs: 4.2.11
@@ -16156,7 +16156,7 @@ snapshots:
   jest-util@28.1.3:
     dependencies:
       '@jest/types': 28.1.3
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
       chalk: 4.1.2
       ci-info: 3.9.0
       graceful-fs: 4.2.11
@@ -16186,7 +16186,7 @@ snapshots:
     dependencies:
       '@jest/test-result': 27.5.1
       '@jest/types': 27.5.1
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       jest-util: 27.5.1
@@ -16196,7 +16196,7 @@ snapshots:
     dependencies:
       '@jest/test-result': 28.1.3
       '@jest/types': 28.1.3
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       emittery: 0.10.2
@@ -16205,19 +16205,19 @@ snapshots:
 
   jest-worker@26.6.2:
     dependencies:
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
       merge-stream: 2.0.0
       supports-color: 7.2.0
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
   jest-worker@28.1.3:
     dependencies:
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -16235,7 +16235,7 @@ snapshots:
 
   jiti@1.21.0: {}
 
-  joi@17.13.1:
+  joi@17.13.3:
     dependencies:
       '@hapi/hoek': 9.3.0
       '@hapi/topo': 5.1.0
@@ -17217,7 +17217,7 @@ snapshots:
   muse-ui@4.0.0-alpha.1(@babel/core@7.24.4)(@opentelemetry/api@1.8.0)(@types/react-dom@18.3.0)(@types/react@18.3.3)(embla-carousel@8.0.0-rc15)(esbuild@0.17.19):
     dependencies:
       '@faker-js/faker': 8.4.1
-      '@hookform/resolvers': 3.6.0(react-hook-form@7.51.5(react@18.3.1))
+      '@hookform/resolvers': 3.6.0(react-hook-form@7.52.0(react@18.3.1))
       '@radix-ui/react-accessible-icon': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-accordion': 1.1.2(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-alert-dialog': 1.0.5(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -17270,7 +17270,7 @@ snapshots:
       react: 18.3.1
       react-day-picker: 8.10.1(date-fns@2.30.0)(react@18.3.1)
       react-dom: 18.3.1(react@18.3.1)
-      react-hook-form: 7.51.5(react@18.3.1)
+      react-hook-form: 7.52.0(react@18.3.1)
       react-resizable-panels: 0.0.55(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-wrap-balancer: 0.4.1(react@18.3.1)
       recharts: 2.12.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -17337,13 +17337,13 @@ snapshots:
       - markdown-wasm
       - supports-color
 
-  next-intl@3.15.0(next@14.2.4(@babel/core@7.24.4)(@opentelemetry/api@1.8.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1):
+  next-intl@3.15.2(next@14.2.4(@babel/core@7.24.4)(@opentelemetry/api@1.8.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1):
     dependencies:
       '@formatjs/intl-localematcher': 0.2.32
       negotiator: 0.6.3
       next: 14.2.4(@babel/core@7.24.4)(@opentelemetry/api@1.8.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
-      use-intl: 3.15.0(react@18.3.1)
+      use-intl: 3.15.2(react@18.3.1)
 
   next-themes@0.2.1(next@14.1.3(@opentelemetry/api@1.8.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
@@ -18149,7 +18149,7 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-plugin-tailwindcss@0.6.4(prettier@3.3.2):
+  prettier-plugin-tailwindcss@0.6.5(prettier@3.3.2):
     dependencies:
       prettier: 3.3.2
 
@@ -18206,7 +18206,7 @@ snapshots:
       '@protobufjs/path': 1.1.2
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
-      '@types/node': 18.19.34
+      '@types/node': 18.19.37
       long: 5.2.3
 
   proxy-addr@2.0.7:
@@ -18337,7 +18337,7 @@ snapshots:
 
   react-error-overlay@6.0.11: {}
 
-  react-hook-form@7.51.5(react@18.3.1):
+  react-hook-form@7.52.0(react@18.3.1):
     dependencies:
       react: 18.3.1
 
@@ -19725,10 +19725,9 @@ snapshots:
     dependencies:
       react: 18.3.1
 
-  use-intl@3.15.0(react@18.3.1):
+  use-intl@3.15.2(react@18.3.1):
     dependencies:
-      '@formatjs/ecma402-abstract': 1.18.2
-      intl-messageformat: 10.5.11
+      intl-messageformat: 10.5.14
       react: 18.3.1
 
   use-sidecar@1.1.2(@types/react@18.3.3)(react@18.3.1):
