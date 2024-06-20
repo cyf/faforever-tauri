@@ -10,7 +10,7 @@
     "format": "prettier --write \"./**/*.{css,js,json,jsx,ts,tsx}\""
   },
   "dependencies": {
-    "@octokit/rest": "^20.1.1",
+    "@octokit/rest": "^21.0.0",
     "@hookform/resolvers": "^3.6.0",
     "@tanstack/react-table": "^8.17.3",
     "@tsparticles/engine": "^3.4.0",
