@@ -101,7 +101,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: cyf/homebrew-faforever
+          repository: cyf/homebrew-cyf
           token: ${{ secrets.CYF_HOMEBREW_FAFOREVER }}
 
       - name: Update Version
