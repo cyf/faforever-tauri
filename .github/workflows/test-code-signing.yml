@@ -107,6 +107,32 @@ jobs:
         with:
           args: ${{ matrix.settings.args }}
 
+      - name: remove windows certificate
+        if: matrix.settings.platform == 'windows-latest'
+        env:
+          WINDOWS_CERTIFICATE_THUMBPRINT: ${{ secrets.WINDOWS_CERTIFICATE_THUMBPRINT }}
+        run: |
+          if (test-path -Path "certificate/certificate.pfx") {
+            remove-item -Path "certificate/certificate.pfx"
+            Write-Output "The file(.pfx) was removed successfully."
+          } else {
+            Write-Output "The specified file(.pfx) was not found."
+          }
+
+          # Specifies the Thumbprint of the certificate to be removed.
+          $thumbprint = "$env:WINDOWS_CERTIFICATE_THUMBPRINT"
+
+          # Find a certificate using its thumbprint.
+          $cert = Get-ChildItem -Path Cert:\CurrentUser\My | Where-Object {$_.Thumbprint -eq $thumbprint}
+
+          # If a certificate is found, remove it.
+          if ($cert -ne $null) {
+            Remove-Item -Path "Cert:\CurrentUser\My\$thumbprint"
+            Write-Output "The certificate was removed successfully."
+          } else {
+            Write-Output "The specified certificate was not found."
+          }
+
       - name: upload artifact
         uses: actions/upload-artifact@v4
         with:
