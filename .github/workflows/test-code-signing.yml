@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  publish:
+  code-signing:
     permissions:
       contents: write
     strategy:
@@ -12,16 +12,28 @@ jobs:
       matrix:
         settings:
           - platform: 'macos-latest'
+            os: macos
+            arch: universal
             args: '--target universal-apple-darwin'
           - platform: 'macos-latest'
+            os: macos
+            arch: x86_64
             args: '--target x86_64-apple-darwin'
           - platform: 'macos-latest'
+            os: macos
+            arch: aarch64
             args: '--target aarch64-apple-darwin'
           - platform: 'windows-latest'
+            os: windows
+            arch: x86_64
             args: '--target x86_64-pc-windows-msvc'
           - platform: 'windows-latest'
+            os: windows
+            arch: i686
             args: '--target i686-pc-windows-msvc'
           - platform: 'windows-latest'
+            os: windows
+            arch: aarch64
             args: '--target aarch64-pc-windows-msvc --bundles nsis'
 
     runs-on: ${{ matrix.settings.platform }}
@@ -39,17 +51,24 @@ jobs:
 
       - name: install Rust stable
         uses: dtolnay/rust-toolchain@stable
+        if: matrix.settings.platform == 'windows-latest'
         with:
-          targets: "aarch64-apple-darwin,aarch64-pc-windows-msvc"
+          targets: "aarch64-pc-windows-msvc"
+
+      - name: install Rust stable
+        uses: dtolnay/rust-toolchain@stable
+        if: matrix.settings.platform == 'macos-latest'
+        with:
+          targets: "aarch64-apple-darwin,x86_64-apple-darwin"
 
       - name: list targets
         run: rustup target list
 
       - name: install dependencies (ubuntu only)
-        if: matrix.settings.platform == 'ubuntu-20.04'
+        if: matrix.settings.platform == 'ubuntu-latest'
         run: |
-          sudo apt-get update
-          sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.0-dev libappindicator3-dev librsvg2-dev patchelf
+          sudo apt update
+          sudo apt install -y libgtk-3-dev libwebkit2gtk-4.0-dev libappindicator3-dev librsvg2-dev patchelf
 
       - name: install dependencies
         run: pnpm install
@@ -88,11 +107,16 @@ jobs:
         with:
           args: ${{ matrix.settings.args }}
 
-      - uses: actions/upload-artifact@v4
+      - name: upload artifact
+        uses: actions/upload-artifact@v4
         with:
-          name: code-signing-artifact
+          name: ${{ matrix.settings.os }}-${{ matrix.settings.arch }}-artifact
           path: |
-            *.dmg
-            *.exe
-            *.msi
-            *.app.tar.gz
+            src-tauri/target/*/release/bundle/*/*.AppImage
+            src-tauri/target/*/release/bundle/*/*.tar.gz
+            src-tauri/target/*/release/bundle/*/*.deb
+            src-tauri/target/*/release/bundle/*/*.dmg
+            src-tauri/target/*/release/bundle/*/*.exe
+            src-tauri/target/*/release/bundle/*/*.msi
+            src-tauri/target/*/release/bundle/*/*.zip
+            src-tauri/target/*/release/bundle/*/*.sig
