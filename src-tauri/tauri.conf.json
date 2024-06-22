@@ -43,6 +43,11 @@
       ],
       "macOS": {
         "license": "MIT"
+      },
+      "windows": {
+        "certificateThumbprint": "727AE81F8D5EAED0466CEF6BF82BF3A1A5CC7E1F",
+        "digestAlgorithm": "sha256",
+        "timestampUrl": "http://timestamp.comodoca.com"
       }
     },
     "security": {

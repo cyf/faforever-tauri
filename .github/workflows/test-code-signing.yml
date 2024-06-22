@@ -1,14 +1,7 @@
 name: Code Signing
 
 on:
-  # Enable manual run
   workflow_dispatch:
-    inputs:
-      version:
-        description: "Tag to create (e.g. v1.0.0)."
-        required: true
-        default: "v1.0.0"
-        type: string
 
 jobs:
   publish:
@@ -24,6 +17,12 @@ jobs:
             args: '--target x86_64-apple-darwin'
           - platform: 'macos-latest'
             args: '--target aarch64-apple-darwin'
+          - platform: 'windows-latest'
+            args: '--target x86_64-pc-windows-msvc'
+          - platform: 'windows-latest'
+            args: '--target i686-pc-windows-msvc'
+          - platform: 'windows-latest'
+            args: '--target aarch64-pc-windows-msvc --bundles nsis'
 
     runs-on: ${{ matrix.settings.platform }}
     steps:
@@ -60,6 +59,18 @@ jobs:
         run: |
           copy fixed_pkg\makeCacheItemFromFilePath.js node_modules\.pnpm\node_modules\@contentlayer\source-files\dist\fetchData\makeCacheItemFromFilePath.js
 
+      - name: import windows certificate
+        if: matrix.settings.platform == 'windows-latest'
+        env:
+          WINDOWS_CERTIFICATE: ${{ secrets.WINDOWS_CERTIFICATE }}
+          WINDOWS_CERTIFICATE_PASSWORD: ${{ secrets.WINDOWS_CERTIFICATE_PASSWORD }}
+        run: |
+          New-Item -ItemType directory -Path certificate
+          Set-Content -Path certificate/tempCert.txt -Value $env:WINDOWS_CERTIFICATE
+          certutil -decode certificate/tempCert.txt certificate/certificate.pfx
+          Remove-Item -path certificate -include tempCert.txt
+          Import-PfxCertificate -FilePath certificate/certificate.pfx -CertStoreLocation Cert:\CurrentUser\My -Password (ConvertTo-SecureString -String $env:WINDOWS_CERTIFICATE_PASSWORD -Force -AsPlainText)
+
       - uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.CYF_RELEASE_TOKEN }}
@@ -75,7 +86,13 @@ jobs:
           GIT_COMMIT_SHA: ${{ github.sha }}
           NEXT_PUBLIC_GOOGLE_ID: ${{ secrets.NEXT_PUBLIC_GOOGLE_ID }}
         with:
-          tagName: ${{ github.event.inputs.version }} # the action automatically replaces \_\_VERSION\_\_ with the app version
-          releaseName: ${{ github.event.inputs.version }}
-          prerelease: true
           args: ${{ matrix.settings.args }}
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: code-signing-artifact
+          path: |
+            *.dmg
+            *.exe
+            *.msi
+            *.app.tar.gz
