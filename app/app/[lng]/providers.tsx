@@ -2,12 +2,15 @@
 
 import { ThemeProvider } from "next-themes";
 import { cacheThemeKey } from "@/constants";
-import { defaultTheme } from "@/theme";
+import { useIsTauri } from "@/lib/hooks";
 
 export function Providers({ children }: { children: React.ReactNode }) {
+  const isTauri = useIsTauri();
+
   return (
     <ThemeProvider
-      defaultTheme={defaultTheme}
+      defaultTheme={isTauri ? "light" : "system"}
+      enableSystem={!isTauri}
       storageKey={cacheThemeKey}
       attribute="class"
     >

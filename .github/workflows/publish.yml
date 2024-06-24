@@ -99,6 +99,7 @@ jobs:
         with:
           tagName: v__VERSION__ # the action automatically replaces \_\_VERSION\_\_ with the app version
           releaseName: v__VERSION__
+          includeDebug: true
           args: ${{ matrix.settings.args }}
 
       - name: remove windows certificate

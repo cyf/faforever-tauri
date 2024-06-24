@@ -21,7 +21,7 @@ import { BiTestTube } from "react-icons/bi";
 import { FaBlog } from "react-icons/fa";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { isInApp } from "@/constants";
+import { useIsTauri } from "@/lib/hooks";
 import { allPosts } from "contentlayer/generated";
 
 export default function Home({
@@ -32,6 +32,7 @@ export default function Home({
   };
 }) {
   const t = useTranslations();
+  const isTauri = useIsTauri();
 
   const post = allPosts
     .filter((post) => post.slug.startsWith(`${params.lng}/blog`))
@@ -106,7 +107,7 @@ export default function Home({
       <div className="mt-10 grid w-full max-w-screen-xl animate-fade-up xl:px-0">
         <div className="flex items-center justify-center">
           <div
-            className={`grid w-full grid-cols-1 gap-5 md:max-w-3xl ${isInApp ? "md:grid-cols-3" : "md:grid-cols-2"}`}
+            className={`grid w-full grid-cols-1 gap-5 md:max-w-3xl ${isTauri ? "md:grid-cols-3" : "md:grid-cols-2"}`}
           >
             <Link
               href={`https://www.chenyifaer.com/portal/${params.lng}/admin/`}
@@ -130,7 +131,7 @@ export default function Home({
                 <span className="sm:inline-block">{t("common.play")}</span>
               </p>
             </Link>
-            <ShowContent isShow={isInApp}>
+            <ShowContent isShow={isTauri}>
               <button
                 className="flex items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 py-2 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800 hover:enabled:border-gray-800 disabled:cursor-not-allowed dark:bg-black dark:text-white/80 max-md:mx-10"
                 onClick={createWindow}

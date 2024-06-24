@@ -4,7 +4,7 @@
     "beforeBuildCommand": "pnpm build:app",
     "devPath": "http://localhost:3000",
     "distDir": "../app/out",
-    "withGlobalTauri": false
+    "withGlobalTauri": true
   },
   "package": {
     "productName": "FaForever",

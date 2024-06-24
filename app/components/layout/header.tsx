@@ -3,10 +3,10 @@ import React, { useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { listen, type UnlistenFn } from "@tauri-apps/api/event";
+import { appWindow } from "@tauri-apps/api/window";
 import { useTranslations } from "next-intl";
 import { Github } from "@/components/shared/icons";
-import { useAppTheme, useScroll } from "@/lib/hooks";
-import { isInApp } from "@/constants";
+import { useAppTheme, useScroll, useIsTauri } from "@/lib/hooks";
 import LngDropdown from "./lng-dropdown";
 import ThemeDropdown from "./theme-dropdown";
 import type { LngProps } from "@/types/i18";
@@ -14,6 +14,7 @@ import type { LngProps } from "@/types/i18";
 export default function Header(props: LngProps) {
   const t = useTranslations();
   const { setTheme } = useAppTheme();
+  const isTauri = useIsTauri();
   const scrolled = useScroll(50);
 
   // toggle menu
@@ -23,14 +24,26 @@ export default function Header(props: LngProps) {
   };
 
   useEffect(() => {
+    const updateAppTheme = async () => {
+      const tauriTheme = await appWindow.theme();
+      console.log("tauriTheme", tauriTheme);
+      setTheme(tauriTheme || "light");
+    };
+
+    isTauri && updateAppTheme();
+  }, [isTauri]);
+
+  useEffect(() => {
     let unlisten: UnlistenFn;
-    if (isInApp) {
+    if (typeof window.__TAURI_IPC__ === "function") {
       listen<string>("theme_changed", (event) => {
         console.log(
           `Got response in window ${event.windowLabel}, payload: ${event.payload}`,
         );
         setTheme(event.payload);
-      }).then((value) => (unlisten = value));
+      })
+        .then((value) => (unlisten = value))
+        .catch(console.error);
     }
     return () => {
       unlisten && unlisten();
@@ -50,7 +63,7 @@ export default function Header(props: LngProps) {
     [],
   );
 
-  console.log("isInApp", isInApp);
+  console.log("isTauri", isTauri);
 
   return (
     <div
@@ -93,7 +106,7 @@ export default function Header(props: LngProps) {
             <li className="h-8 w-8 sm:h-9 sm:w-9">
               <LngDropdown lng={props.lng} />
             </li>
-            <ShowContent isShow={!isInApp}>
+            <ShowContent isShow={!isTauri}>
               <li className="h-8 w-8 sm:h-9 sm:w-9">
                 <ThemeDropdown lng={props.lng} />
               </li>
