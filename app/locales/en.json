@@ -4,6 +4,9 @@
     "play": "PLAY",
     "create": "Create Window"
   },
+  "settings": {
+    "change-language": "Change Language"
+  },
   "header": {
     "title": "FaForever",
     "menus": {

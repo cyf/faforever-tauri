@@ -42,7 +42,7 @@ export async function generateMetadata({
 
 async function getMessages(lng: string) {
   try {
-    return (await import(`../../messages/${lng}.json`)).default;
+    return (await import(`../../locales/${lng}.json`)).default;
   } catch (error) {
     notFound();
   }

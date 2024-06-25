@@ -4,6 +4,9 @@
     "play": "开始玩",
     "create": "创建窗口"
   },
+  "settings": {
+    "change-language": "更改语言"
+  },
   "header": {
     "title": "FaForever",
     "menus": {
