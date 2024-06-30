@@ -3,15 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "dev": "next dev",
+    "format": "prettier --write \"./**/*.{css,js,json,jsx,ts,tsx}\"",
     "lint": "next lint",
-    "format": "prettier --write \"./**/*.{css,js,json,jsx,ts,tsx}\""
+    "start": "next start"
   },
   "dependencies": {
-    "@octokit/rest": "^20.1.1",
     "@hookform/resolvers": "^3.6.0",
+    "@octokit/rest": "^20.1.1",
     "@tanstack/react-table": "^8.17.3",
     "@tsparticles/engine": "^3.4.0",
     "@tsparticles/react": "^3.0.0",
@@ -70,15 +70,16 @@
     "prettier": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.5",
     "prop-types": "^15.8.1",
+    "sort-package-json": "^2.10.0",
     "tailwindcss": "^3.4.4",
     "typescript": "5.4.5"
+  },
+  "engines": {
+    "node": "^18"
   },
   "overrides": {
     "muse-ui": {
       "react-hook-form": "^7.52.0"
     }
-  },
-  "engines": {
-    "node": "^18"
   }
 }

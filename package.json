@@ -1,7 +1,7 @@
 {
   "name": "faforever",
-  "private": true,
   "version": "0.0.1+25",
+  "private": true,
   "type": "module",
   "scripts": {
     "build": "tauri build",
@@ -10,7 +10,6 @@
     "dev": "tauri dev",
     "dev:app": "pnpm --filter app dev",
     "dev:docs": "pnpm --filter docs dev",
-    "format": "pnpm --filter docs --filter app format",
     "prepare": "husky"
   },
   "dependencies": {
@@ -21,10 +20,11 @@
     "@commitlint/config-conventional": "^19.2.2",
     "@tauri-apps/cli": "^1.5.14",
     "husky": "^9.0.11",
-    "lint-staged": "^15.2.7"
+    "lint-staged": "^15.2.7",
+    "sort-package-json": "^2.10.0"
   },
+  "packageManager": "pnpm@9.1.4",
   "engines": {
     "node": "^18"
-  },
-  "packageManager": "pnpm@9.1.4"
+  }
 }
