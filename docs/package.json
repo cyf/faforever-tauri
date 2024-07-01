@@ -13,7 +13,7 @@
     "@hookform/resolvers": "^3.6.0",
     "@octokit/rest": "^21.0.0",
     "@tanstack/react-table": "^8.19.2",
-    "@tsparticles/engine": "^3.4.0",
+    "@tsparticles/engine": "^3.5.0",
     "@tsparticles/react": "^3.0.0",
     "accept-language": "^3.0.18",
     "class-variance-authority": "^0.7.0",
