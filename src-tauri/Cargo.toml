@@ -1,9 +1,9 @@
 [package]
 name = "faforever"
-version = "0.0.0"
-description = "FaForever"
-authors = ["you"]
-license = ""
+version = "0.0.1"
+description = "A third-party music player that replaces Synology DS Audio client"
+authors = ["kjxbyz"]
+license = "MIT"
 repository = ""
 edition = "2021"
 
@@ -15,7 +15,7 @@ tauri-build = { version = "1.5.2", features = [] }
 [dependencies]
 tauri = { version = "1.6.8", features = [ "system-tray", "shell-open", "updater", "windows7-compat"] }
 serde = { version = "1.0.203", features = ["derive"] }
-serde_json = "1.0.117"
+serde_json = "1.0.119"
 
 [features]
 # this feature is used for production builds or when `devPath` points to the filesystem
