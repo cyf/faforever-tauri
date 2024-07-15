@@ -15,7 +15,7 @@ export default function Footer(props: LngProps) {
       {/*  {t("footer.footer")}{" "}*/}
       {/*  <a*/}
       {/*    className="font-medium text-gray-800 underline transition-colors dark:text-white/90"*/}
-      {/*    href="https://github.com/cyf/fafa-runner"*/}
+      {/*    href="https://github.com/cyf/faforever-tauri"*/}
       {/*    target="_blank"*/}
       {/*    rel="noopener noreferrer"*/}
       {/*  >*/}
@@ -41,14 +41,17 @@ export default function Footer(props: LngProps) {
       </p>
       <span className="mt-2 flex flex-wrap items-center justify-center text-sm text-gray-500 dark:text-gray-400 sm:text-center">
         © {`2023${fullYear === 2023 ? "" : `-${fullYear}`}`}&nbsp;
-        <a href="https://www.chenyifaer.com" className="hover:underline">
+        <a
+          href="https://www.chenyifaer.com/faforever"
+          className="hover:underline"
+        >
           {t("header.title")}
         </a>
         . {t("footer.copyright")}&nbsp;
         {process.env.GIT_COMMIT_SHA && (
           <p className="flex items-center justify-center">
             <a
-              href={`https://github.com/cyf/faforever/commit/${process.env.GIT_COMMIT_SHA}`}
+              href={`https://github.com/cyf/faforever-tauri/commit/${process.env.GIT_COMMIT_SHA}`}
               target="_blank"
               className="hover:underline"
               rel="noreferrer"
@@ -59,7 +62,7 @@ export default function Footer(props: LngProps) {
         )}
         &nbsp;
         <Image
-          src="https://visitor-badge.laobi.icu/badge?page_id=fafa-runner.chenyifaer.com"
+          src="https://visitor-badge.laobi.icu/badge?page_id=faforever-tauri.chenyifaer.com"
           width={60}
           height={20}
           alt="visitor badge"

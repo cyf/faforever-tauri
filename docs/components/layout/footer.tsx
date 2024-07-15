@@ -15,7 +15,7 @@ function Footer(props: LngProps) {
       {/*  {t("footer")}{" "}*/}
       {/*  <a*/}
       {/*    className="font-medium text-gray-800 underline transition-colors dark:text-white/90"*/}
-      {/*    href="https://github.com/cyf/faforever"*/}
+      {/*    href="https://github.com/cyf/faforever-tauri"*/}
       {/*    target="_blank"*/}
       {/*    rel="noopener noreferrer"*/}
       {/*  >*/}

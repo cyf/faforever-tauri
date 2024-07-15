@@ -1,8 +1,8 @@
 # FaForever
 
-[![Publish](https://github.com/cyf/faforever/actions/workflows/publish.yml/badge.svg)](https://github.com/cyf/faforever/actions/workflows/publish.yml)
-[![GitHub Release](https://img.shields.io/github/v/release/cyf/faforever)](https://github.com/cyf/faforever/releases)
-[![GitHub License](https://img.shields.io/github/license/cyf/faforever)](https://github.com/cyf/faforever/blob/main/LICENSE)
+[![Publish](https://github.com/cyf/faforever-tauri/actions/workflows/publish.yml/badge.svg)](https://github.com/cyf/faforever-tauri/actions/workflows/publish.yml)
+[![GitHub Release](https://img.shields.io/github/v/release/cyf/faforever-tauri)](https://github.com/cyf/faforever-tauri/releases)
+[![GitHub License](https://img.shields.io/github/license/cyf/faforever-tauri)](https://github.com/cyf/faforever-tauri/blob/main/LICENSE)
 
 ## Setup
 
@@ -46,4 +46,3 @@ pnpm run build
 # yarn
 yarn build
 ```
-
