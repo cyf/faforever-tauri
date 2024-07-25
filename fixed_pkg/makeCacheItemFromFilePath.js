@@ -1,5 +1,5 @@
-import { filePathJoin, fs } from '@contentlayer/utils';
-import { identity, O, OT, pipe, T, These } from '@contentlayer/utils/effect';
+import { filePathJoin, fs } from '@contentlayer2/utils';
+import { identity, O, OT, pipe, T, These } from '@contentlayer2/utils/effect';
 import matter from 'gray-matter';
 import yaml from 'yaml';
 import { FetchDataError } from '../errors/index.js';
@@ -44,7 +44,7 @@ export const makeCacheItemFromFilePath = ({ relativeFilePath, filePathPatternMap
         });
     }
     return These.warnOption({ document, documentHash, hasWarnings: O.isSome(warnings), documentTypeName: documentTypeDef.name }, warnings);
-}), OT.withSpan('@contentlayer/source-local/fetchData:makeCacheItemFromFilePath', { attributes: { relativeFilePath } }), T.mapError((error) => {
+}), OT.withSpan('@contentlayer2/source-local/fetchData:makeCacheItemFromFilePath', { attributes: { relativeFilePath } }), T.mapError((error) => {
     switch (error._tag) {
         case 'fs.StatError':
         case 'fs.ReadFileError':
@@ -88,7 +88,7 @@ const processRawContent = ({ fullFilePath, relativeFilePath, }) => pipe(T.gen(fu
         default:
             return yield* $(T.fail(new FetchDataError.UnsupportedFileExtension({ extension: filePathExtension, filePath: relativeFilePath })));
     }
-}), OT.withSpan('@contentlayer/source-local/fetchData:getRawContent'));
+}), OT.withSpan('@contentlayer2/source-local/fetchData:getRawContent'));
 const getComputedValues = ({ document, documentTypeDef, documentFilePath, }) => {
     if (documentTypeDef.computedFields === undefined) {
         return T.succeed(undefined);

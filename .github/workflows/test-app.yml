@@ -37,10 +37,10 @@ jobs:
       - name: install dependencies
         run: pnpm install
 
-      - name: copy files to @contentlayer/source-files
+      - name: copy files to @contentlayer2/source-files
         if: matrix.platforms == 'windows-latest'
         run: |
-          copy fixed_pkg\makeCacheItemFromFilePath.js node_modules\.pnpm\node_modules\@contentlayer\source-files\dist\fetchData\makeCacheItemFromFilePath.js
+          copy fixed_pkg\makeCacheItemFromFilePath.js node_modules\.pnpm\node_modules\@contentlayer2\source-files\dist\fetchData\makeCacheItemFromFilePath.js
 
       - name: build app
         run: pnpm build:app
