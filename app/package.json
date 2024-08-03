@@ -39,7 +39,7 @@
     "react": "18.3.1",
     "react-datalist-input": "^3.2.1",
     "react-dom": "18.3.1",
-    "react-hook-form": "^7.52.1",
+    "react-hook-form": "^7.52.2",
     "react-icons": "^5.2.1",
     "react-markdown": "^9.0.1",
     "react-rough-notation": "^1.0.5",
@@ -77,7 +77,7 @@
   },
   "overrides": {
     "muse-ui": {
-      "react-hook-form": "^7.52.1"
+      "react-hook-form": "^7.52.2"
     }
   }
 }
