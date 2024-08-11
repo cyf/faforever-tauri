@@ -15,7 +15,7 @@
     "@tauri-apps/api": "^1.6.0",
     "@tsparticles/engine": "^3.5.0",
     "@tsparticles/react": "^3.0.0",
-    "accept-language": "^3.0.18",
+    "accept-language": "^3.0.19",
     "class-variance-authority": "^0.7.0",
     "classnames": "^2.5.1",
     "clsx": "^2.1.1",
