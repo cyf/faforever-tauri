@@ -263,8 +263,8 @@ importers:
         specifier: ^1.7.4
         version: 1.7.4
       i18next:
-        specifier: ^23.12.3
-        version: 23.12.3
+        specifier: ^23.14.0
+        version: 23.14.0
       i18next-browser-languagedetector:
         specifier: ^8.0.0
         version: 8.0.0
@@ -309,7 +309,7 @@ importers:
         version: 7.52.2(react@18.3.1)
       react-i18next:
         specifier: ^15.0.1
-        version: 15.0.1(i18next@23.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 15.0.1(i18next@23.14.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-icons:
         specifier: ^5.3.0
         version: 5.3.0(react@18.3.1)
@@ -5916,8 +5916,8 @@ packages:
   i18next-resources-to-backend@1.2.1:
     resolution: {integrity: sha512-okHbVA+HZ7n1/76MsfhPqDou0fptl2dAlhRDu2ideXloRRduzHsqDOznJBef+R3DFZnbvWoBW+KxJ7fnFjd6Yw==}
 
-  i18next@23.12.3:
-    resolution: {integrity: sha512-DyigQmrR10V9U2N6pjhbfahW13GY7n8BQD9swN09JuRRropgsksWVi4vRLeex0Qf7zCPnBfIqQfhcBzdZBQBYw==}
+  i18next@23.14.0:
+    resolution: {integrity: sha512-Y5GL4OdA8IU2geRrt2+Uc1iIhsjICdHZzT9tNwQ3TVqdNzgxHToGCKf/TPRP80vTCAP6svg2WbbJL+Gx5MFQVA==}
 
   iconv-lite@0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
@@ -15950,7 +15950,7 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.24.4
 
-  i18next@23.12.3:
+  i18next@23.14.0:
     dependencies:
       '@babel/runtime': 7.25.0
 
@@ -17102,7 +17102,7 @@ snapshots:
 
   mdx-bundler@10.0.2(esbuild@0.17.19):
     dependencies:
-      '@babel/runtime': 7.24.4
+      '@babel/runtime': 7.25.0
       '@esbuild-plugins/node-resolve': 0.2.2(esbuild@0.17.19)
       '@fal-works/esbuild-plugin-global-externals': 2.1.2
       '@mdx-js/esbuild': 3.0.1(esbuild@0.17.19)
@@ -18522,11 +18522,11 @@ snapshots:
     dependencies:
       react: 18.3.1
 
-  react-i18next@15.0.1(i18next@23.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-i18next@15.0.1(i18next@23.14.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       '@babel/runtime': 7.25.0
       html-parse-stringify: 3.0.1
-      i18next: 23.12.3
+      i18next: 23.14.0
       react: 18.3.1
     optionalDependencies:
       react-dom: 18.3.1(react@18.3.1)
