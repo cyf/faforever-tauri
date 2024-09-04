@@ -59,7 +59,7 @@
     "@tailwindcss/typography": "^0.5.15",
     "@types/js-cookie": "^3.0.6",
     "@types/ms": "^0.7.34",
-    "@types/node": "^18.19.49",
+    "@types/node": "^18.19.50",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.20",
