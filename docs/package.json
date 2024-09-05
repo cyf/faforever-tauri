@@ -55,7 +55,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@tailwindcss/forms": "^0.5.8",
+    "@tailwindcss/forms": "^0.5.9",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/typography": "^0.5.15",
     "@types/ms": "^0.7.34",
