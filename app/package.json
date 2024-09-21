@@ -23,7 +23,7 @@
     "contentlayer2": "^0.5.1",
     "date-fns": "^4.1.0",
     "dayjs": "^1.11.13",
-    "focus-trap-react": "^10.2.3",
+    "focus-trap-react": "^10.3.0",
     "framer-motion": "^11.5.5",
     "js-cookie": "^3.0.5",
     "leva": "0.9.35",
