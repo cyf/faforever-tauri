@@ -33,7 +33,7 @@
     "muse-ui": "^4.0.0-alpha.5",
     "next": "14.2.14",
     "next-contentlayer2": "^0.5.1",
-    "next-intl": "^3.20.0",
+    "next-intl": "^3.23.5",
     "next-themes": "^0.3.0",
     "nextjs-toploader": "^3.7.15",
     "react": "18.3.1",
